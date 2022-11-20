@@ -5,23 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Семерикова, Юлия, консультация, психолог, помощь">
+    <meta name="description" content="">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     <title>Психолог | Юлия</title>
 </head>
 
 <body>
     <div class="main_container">
-        <div class="intro">
-            <div class="into_inner">
-                <div class="intro_about">
-                    <h1 class="about_title">Консультация частного психолога</h1>
-                    <h1 class="about_name">Юлия Семерикова</h1>
-                    <p class="about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        <header class="mobile_header">
+            <div class="mobile_header_inner">
+                <div class="mobile_header_text">Юлия Семерикова</div>
+                <div class="mobile_header_pic_place">
+                    <img class="mobile_header_pic" src="assets/img/mobile_imgs/star.png" alt="">
+                </div>
+            </div>
+        </header>
+
+        <div class="intro_inner">
+            <div class="intro_about">
+                <div class="intro_inner_item">
+                    <div class="about_title">Консультация частного психолога</div>
+                </div>
+                <div class="intro_inner_item">
+                    <div class="about_name">Юлия Семерикова</div>
+                </div>
+                <div class="intro_inner_item">
+                    <p class="about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
-                <div class="intro_photo"></div>
+            </div>
+            <div class="intro_photoplace">
+
+                <img class="intro_photo" src="http://placeimg.com/560/730" alt="">
             </div>
         </div>
         <div class="delimetr">
@@ -29,7 +50,7 @@
         </div>
 
         <div class="story_container">
-            <div class="content">
+            <div class="content" id="content_about">
                 <div class="img_container">
                     <img class="first">
                 </div>
@@ -38,7 +59,7 @@
                 </div>
             </div>
 
-            <div class="content">
+            <div class="content" id="content_edu">
                 <div class="img_container">
                     <img class="second">
                 </div>
@@ -47,9 +68,7 @@
                 </div>
             </div>
 
-
-
-            <div class="content">
+            <div class="content" id="content_exp">
                 <div class="img_container">
                     <img class="third">
                 </div>
@@ -58,7 +77,7 @@
                 </div>
             </div>
 
-            <div class="content">
+            <div class="content" id="content_price">
                 <div class="img_container">
                     <img class="four">
                 </div>
@@ -67,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="content">
+            <div class="content" id="content_methods">
                 <div class="img_container">
                     <img class="five">
                 </div>
@@ -89,186 +108,322 @@
             <p class="footer_link" href="mailto:">julia@gmail.com</p>
         </footer>
 
-
-        <div class="stories">
-
-            <div class="item_stories">
-                <div class="story" id="about_story">
-                    <div class="card_bars">
-                        <div class="progress_bar_wrap">
-                            <div id="first" class="progress_bar"></div>
-                        </div>
-                        <div class="progress_bar_wrap">
-                            <div id="second" class="progress_bar"></div>
-                        </div>
+        <!-- Stories -->
+        <div class="stories" id="about">
+            <div class="stories_block" id="stories_block">
+                <div class="card_bars">
+                    <div class="progress_bar_wrap">
+                        <div id="first" class="progress_bar"></div>
                     </div>
+                    <div class="progress_bar_wrap">
+                        <div id="second" class="progress_bar"></div>
+                    </div>
+                </div>
 
-                    <div class="first_about">
+                <div class="first_about" id="story">
+                    <div class="about_inner">
 
                         <div class="photo_stories_about"></div>
-                        <div class="first_about_text">
+                        <h1 class="first_about_text">
                             Юлия Семерикова
-                        </div>
+                        </h1>
                         <div class="arrow_right">
                             <div></div>
                         </div>
                     </div>
-
-
                 </div>
-            </div>
 
-
-        </div> <!-- main_container -->
-    </div>
-
-
-
-
-    <div class="mobile_container">
-        <header class="mobile_header">
-            <div class="mobile_header_inner">
-                <div class="mobile_header_text">Юлия Семерикова</div>
-                <div class="mobile_header_pic_place">
-                    <img class="mobile_header_pic" src="assets/img/mobile_imgs/star.png" alt="">
-                </div>
-            </div>
-        </header>
-        <div class="mobile_intro">
-            <div class="mobile_intro_inner">
-                <div class="mobile_intro_inner_item">
-                    <h1 class="mobile_about_title">Консультация частного психолога</h1>
-                </div>
-                <div class="mobile_intro_inner_item">
-                    <h1 class="mobile_about_name">Юлия Семерикова</h1>
-                </div>
-                <div class="mobile_intro_inner_item">
-                    <p class="mobile_about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <div class="mobile_intro_photoplace">
-
-                <img class="mobile_intro_photo" src="http://placeimg.com/396/290/girl" alt="">
-            </div>
-            
-        </div>
-        <div class="mobile_delimetr">
-            <img class="mobile_delimetr_photo" src="assets/img/mobile_imgs/mobile_delimetr.png" alt="">
-        </div>
-        
-        <!-- <div class="mobile_intro">
-            <div class="mobile_into_inner">
-                <div class="mobile_intro_about">
-                    <h1 class="mobile_about_title">Консультация частного психолога</h1>
-                    <h1 class="mobile_about_name">Юлия Семерикова</h1>
-                    <p class="mobile_about_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <div class="mobile_intro_photo"></div>
-            </div>
-        </div> -->
-        <!-- <div class="delimetr">
-            <img class="delimetr_photo" src="assets/img/delimetr.png" alt="">
-        </div>
-
-        <div class="story_container">
-            <div class="content">
-                <div class="img_container">
-                    <img class="first">
-                </div>
-                <div class="text_container">
-                    обо мне
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="img_container">
-                    <img class="second">
-                </div>
-                <div class="text_container">
-                    образование
-                </div>
-            </div>
-
-
-
-            <div class="content">
-                <div class="img_container">
-                    <img class="third">
-                </div>
-                <div class="text_container">
-                    опыт работы
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="img_container">
-                    <img class="four">
-                </div>
-                <div class="text_container">
-                    цены
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="img_container">
-                    <img class="five">
-                </div>
-                <div class="text_container">
-                    методики
-                </div>
-            </div>
-        </div> 
-        <div class="record">
-            <button class="rec-btn" type="button" data-tab="#offline_record">записаться на офлайн-консультацию</button>
-            <button class="rec-btn" type="button" data-tab="#offline_record" onclick="move()">записаться на
-                офлайн-консультацию</button>
-
-        </div>
-
-        <footer>
-            <p class="footer_link" href="callto:">+7(912) 765-77-72</p>
-            <p class="footer_link" href="mailto:">julia@gmail.com</p>
-        </footer>
-
-
-        <div class="stories">
-
-            <div class="item_stories">
-                <div class="story" id="about_story">
-                    <div class="card_bars">
-                        <div class="progress_bar_wrap">
-                            <div id="first" class="progress_bar"></div>
+                <div class="second_about" id="story">
+                    <img class="circular_photo" src="http://placeimg.com/180/110/any" alt="">
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">психолог</div>
                         </div>
-                        <div class="progress_bar_wrap">
-                            <div id="second" class="progress_bar"></div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">18 лет опыта</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">Что-то третье</div>
                         </div>
                     </div>
+                </div>
+            </div> <!-- Stories Blocks in one story -->
+        </div> <!-- Story About -->
 
-                    <div class="first_about">
+        <!-- Story Edu -->
+        <div class="stories" id="edu">
+            <div class="stories_block stories_block--edu" id="stories_block">
+                <div class="card_bars">
+                    <div class="progress_bar_wrap">
+                        <div id="first" class="progress_bar"></div>
+                    </div>
+                    <div class="progress_bar_wrap">
+                        <div id="second" class="progress_bar"></div>
+                    </div>
+                </div>
 
-                        <div class="photo_stories_about"></div>
+                <div class="first_edu" id="story">
+                    <div class="about_inner">
                         <div class="first_about_text">
-                            Юлия Семерикова
+                            Мои<br>дипломы
                         </div>
-                        <div class="arrow_right">
-                            <div></div>
+
+                    </div>
+                </div>
+                <div class="second_edu" id="story">
+                    <div class="about_inner">
+                        <div class="first_about_text">
+                            Мои<br>сертификаты
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Story Edu -->
+
+        <!-- Story Exp -->
+        <div class="stories" id="exp">
+            <div class="stories_block stories_block--exp" id="stories_block">
+                <div class="card_bars">
+                    <div class="progress_bar_wrap">
+                        <div id="first" class="progress_bar"></div>
+                    </div>
+                    <div class="progress_bar_wrap">
+                        <div id="second" class="progress_bar"></div>
+                    </div>
+                </div>
+
+                <div class="first_edu" id="story">
+                    <div class="about_inner">
+                        <div class="first_about_text">Мой опыт</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Story exp -->
+
+        <div class="stories" id="price">
+            <div class="stories_block stories_block--exp" id="stories_block">
+                <div class="card_bars">
+                    <div class="progress_bar_wrap">
+                        <div id="first" class="progress_bar"></div>
+                    </div>
+                    <div class="progress_bar_wrap">
+                        <div id="second" class="progress_bar"></div>
+                    </div>
+                    <div class="progress_bar_wrap">
+                        <div id="third" class="progress_bar"></div>
+                    </div>
+                    <div class="progress_bar_wrap">
+                        <div id="four" class="progress_bar"></div>
+                    </div>
+                </div>
+
+                <!--Individ Price-->
+                <div class="second_about second_about--price" id="story">
+                    <h1 class="first_about_text first_about_text--price">Индивидуальная терапия</h1>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">онлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3000 руб</div>
                         </div>
                     </div>
+                    <div class="line"></div>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">оффлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3500 руб</div>
+                        </div>
+                    </div>
+                    <img class="stories_arrow" src="assets/img/stories_arrow.png" alt="">
+                </div>
+                <!--Individ Price-->
+
+                <!--Couple Price-->
+                <div class="second_about second_about--price" id="story">
+                    <h1 class="first_about_text first_about_text--price">Парная терапия</h1>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">онлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3000 руб</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">оффлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3000 руб</div>
+                        </div>
+                    </div>
+                    <img class="stories_arrow" src="assets/img/stories_arrow.png" alt="">
+                </div>
+                <!--Couple Price-->
+
+                <!--Family-->
+                <div class="second_about second_about--price" id="story">
+                    <h1 class="first_about_text first_about_text--price">Семейная терапия</h1>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">онлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3000 руб</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">оффлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3000 руб</div>
+                        </div>
+                    </div>
+                    <img class="stories_arrow" src="assets/img/stories_arrow.png" alt="">
 
 
                 </div>
-            </div>
+                <!--Family Price-->
 
 
-        </div>  -->
-    </div>
-    <!--Mobile container -->
-
-
+                <!--Group-->
+                <div class="second_about second_about--price" id="story">
+                    <h1 class="first_about_text first_about_text--price">Групповая терапия</h1>
+                    <span> *5-8 человек</span>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">онлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3000 руб</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="achive_column">
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Ellipse.png" alt="">
+                            </div>
+                            <div class="achive_text">оффлайн</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Star_exp.png" alt="">
+                            </div>
+                            <div class="achive_text">60 минут</div>
+                        </div>
+                        <div class="achive">
+                            <div class="achive_icon">
+                                <img src="assets/img/Rectangle.png" alt="">
+                            </div>
+                            <div class="achive_text">3500 руб</div>
+                        </div>
+                    </div>
+                </div>
+                <!--Group Price-->
+            </div> <!-- Stories Block in one story -->
+        </div> <!-- Story price -->
+    </div><!--main_container-->
 </body>
 
 <script src="assets/js/script.js"></script>

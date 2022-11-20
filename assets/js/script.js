@@ -1,57 +1,114 @@
 
 
-// var progress_bar = [document.getElementById('first'), document.getElementById('second')];
-// console.log("prog len " + progress_bar[0])
+var storyBlocks = document.querySelectorAll("div.stories");
+var bg = document.querySelectorAll("div.bg");
+var currentBlock;
 
-// console.log("prog len " + progress_bar.length)
-// var i = 0;
-// var n = 0;
-// while (n <= progress_bar.length) {
-//     move(); 
-//     n++
-//     console.log("n =" + n);
-// };
-function move() {
-    var progress_bar = document.getElementById('first');
+for (let i = 0; i < storyBlocks.length; ++i) {
 
-    // progress_bar = progress_bar[i];
-    // console.log("i =" + i);
-    var width = 0;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            // width = width + 0.07;
-            width++
-            progress_bar.style.width = width + '%';
-
-        }
-    }
-    // i++
-    // console.log("i =" + i);
-    // console.log("prog len " + progress_bar[1])
-
+    storyBlocks[i].style.display = "none";
 
 }
 
-// move();
+var contents = document.querySelectorAll("div.content");
+
+var storiesCurrent;
+var progressBars;
+
+for (let i = 0; i < contents.length; ++i) {
+
+    contents[i].onclick = function (e) {
+        storyBlocks[i].style.display = "flex";
+        let type = contents[i].id.slice(8, contents[i].id.length);
+        storiesCurrent = document.querySelectorAll("div#" + type + " div#story");
+        progressBars = document.querySelectorAll("div#" + type + " div.progress_bar");
+
+        for (let k = 0; k < storyBlocks.length; ++k) {
+            if (storyBlocks[k].id == type) {
+                storyBlocks[k].style.display = "flex";
+                currentBlock = k;
+            }
+            else {
+                storyBlocks[k].style.display = "none";
+            }
+        }
+
+        main_story();
+    }
+    // const popup = document.querySelector(".pop-up");
+}
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     let box = document.querySelector('.card_item');
-//     box.addEventListener('click', chooseSide);
-// });
+function setCurrentBlock(id) {
+    let type = contents[id].id.slice(8, contents[id].id.length);
+    storiesCurrent = document.querySelectorAll("div#" + type + " div#story");
+    progressBars = document.querySelectorAll("div#" + type + " div.progress_bar");
 
-// function chooseSide(e) {
-//     const { clientX, clientY } = e;
-//     const { clientHeight, clientWidth } = box
-//     if (clientY > (clientHeight / 2)) {
-//         console.log('bottom')
-//     } else if (clientX < (clientWidth / 2)) {
-//         console.log('left')
-//     } else {
-//         console.log('right')
-//     }
-// }
+    for (let k = 0; k < storyBlocks.length; ++k) {
+        if (storyBlocks[k].id == type) {
+            storyBlocks[k].style.display = "flex";
+            currentBlock = k;
+        }
+        else {
+            storyBlocks[k].style.display = "none";
+        }
+
+    }
+    main_story();
+}
+var currentStory;
+var width;
+var id;
+
+function main_story() {
+    currentStory = 0;
+    setVisibleStory(0);
+    width = 0;
+    id = setInterval(frame, 10);
+    for (let i = 0; i < progressBars.length; ++i) {
+        progressBars[i].style.width = "0%";
+    }
+
+}
+function setVisibleStory(id) {
+
+    for (let i = 0; i < storiesCurrent.length; ++i) {
+        if (i == id) {
+            storiesCurrent[i].style.display = "flex";
+        }
+        else {
+            storiesCurrent[i].style.display = "none";
+        }
+    }
+    
+}
+function frame() {
+    if (width >= 100) {
+        currentStory++;
+        if (currentStory < storiesCurrent.length) {
+            width = 0;
+            setVisibleStory(currentStory);
+        }
+        else {
+            currentBlock++;
+            if (currentBlock < storyBlocks.length) {
+                setCurrentBlock(currentBlock);
+            }
+            else {
+                clearInterval(id);
+            }
+        }
+
+    } else {
+        width = width + 0.1;
+        progressBars[currentStory].style.width = width + '%';
+    }
+}
+
+
+
+
+
+
+
