@@ -94,7 +94,7 @@ h6 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 90vw;
+    width: 73vw;
     /* max-width: 1435px; */
     /* min-width: 1435px; */
     padding: 5.4vh 1.1vw 1.62vh 1.1vw;
@@ -106,6 +106,13 @@ h6 {
         padding: 1.4vh 2vw 1vh 2vw;
 
     }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55.469vw;
 }
 
 .intro_inner {
@@ -249,8 +256,6 @@ h6 {
 
 .intro_photoplace {
     position: relative;
-    display: flex;
-    justify-content: center;
     margin-top: 5.26vh;
     margin-left: -2.7vw;
     width: 28.65vw;
@@ -263,8 +268,6 @@ h6 {
 
 .intro_photo {
     position: absolute;
-    /* height: 28vh; */
-    /* transform: translateY(17vh); */
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -288,14 +291,28 @@ h6 {
     }
 }
 
-.delimetr_photo {
+.delimetr {
+    display: flex;
+    justify-content: center;
+    position: relative;
     margin-top: 3.8vw;
-
-    width: 100%;
-    height: 4vh;
     margin-bottom: 2.2vw;
+    width: 100%;
+    height: 2vw;
+    z-index: 1000;
 
 }
+
+
+.delimetr_photo {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+   
+
+}
+
 
 @media (max-width: 1024px) {
     .delimetr_photo {
@@ -313,9 +330,9 @@ h6 {
 .story_container {
     display: flex;
     justify-content: space-between;
-    padding: 0 4.73vw;
-    width: 70vw;
-    margin-bottom: 5vw;
+    /* padding: 0 4.73vw; */
+    width: 63.542vw;
+    margin-bottom: 2.292vw;
 }
 
 @media (max-width: 1370px) {
@@ -336,7 +353,7 @@ h6 {
 @media (max-width: 1024px) {
     .story_container {
         font-size: 2vw;
-        width: 100vw;
+        width: 92vw;
 
     }
 }
@@ -344,13 +361,13 @@ h6 {
 
 .content {
     display: grid;
-    margin-right: 1vw;
+    /* margin-right: 2vw; */
     text-align: center;
 
 }
 
 content:last-child {
-    margin: 0 auto;
+    margin-right: 0;
 }
 
 .img_container {
@@ -426,7 +443,7 @@ content:last-child {
 .record {
     display: flex;
     justify-content: space-between;
-    width: 63vw;
+    width: 72.76vw;
     position: relative;
     margin-bottom: 10vh;
 
@@ -447,14 +464,14 @@ content:last-child {
 
 
 .rec-btn {
-    width: 30vw;
-    height: 9.8vh;
+    width: 35.4vw;
+    height: 11.076vh;
     border-radius: 40px;
     background-color: black;
     font-family: "Atyp-Medium";
 
     font-weight: 400;
-    font-size: 2.44vh;
+    font-size: 1.771vw;
     line-height: 2vh;
 
     letter-spacing: 0.0125vw;
