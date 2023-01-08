@@ -2,13 +2,15 @@
 
 var storyBlocks = document.querySelectorAll("div.stories");
 var bg = document.querySelectorAll("div.bg");
+var stories_block = document.querySelectorAll("#stories_block")
 var currentBlock;
 
 for (let i = 0; i < storyBlocks.length; ++i) {
-
     storyBlocks[i].style.display = "none";
-
 }
+
+
+
 
 var contents = document.querySelectorAll("div.content");
 
@@ -22,21 +24,32 @@ for (let i = 0; i < contents.length; ++i) {
         let type = contents[i].id.slice(8, contents[i].id.length);
         storiesCurrent = document.querySelectorAll("div#" + type + " div#story");
         progressBars = document.querySelectorAll("div#" + type + " div.progress_bar");
-
+        
         for (let k = 0; k < storyBlocks.length; ++k) {
             if (storyBlocks[k].id == type) {
                 storyBlocks[k].style.display = "flex";
                 currentBlock = k;
+                // console.log("storyBlocks")
+                storyBlocks[k].addEventListener("click", (e) => {
+                    var click = e.composedPath()
+                    console.log(click)
+                    click = click.includes(stories_block)
+                    console.log(click)
+                    if (!click) {
+                        storyBlocks[i].style.display = "none";
+
+                    }
+    
+                }) 
             }
             else {
                 storyBlocks[k].style.display = "none";
-            }
+            } 
         }
-
         main_story();
     }
-    // const popup = document.querySelector(".pop-up");
 }
+
 
 
 
@@ -49,12 +62,14 @@ function setCurrentBlock(id) {
         if (storyBlocks[k].id == type) {
             storyBlocks[k].style.display = "flex";
             currentBlock = k;
+            console.log(currentBlock)
         }
         else {
             storyBlocks[k].style.display = "none";
         }
-
+        
     }
+    
     main_story();
 }
 var currentStory;
@@ -68,6 +83,7 @@ function main_story() {
     id = setInterval(frame, 10);
     for (let i = 0; i < progressBars.length; ++i) {
         progressBars[i].style.width = "0%";
+
     }
 
 }
@@ -76,13 +92,18 @@ function setVisibleStory(id) {
     for (let i = 0; i < storiesCurrent.length; ++i) {
         if (i == id) {
             storiesCurrent[i].style.display = "flex";
+            
         }
         else {
             storiesCurrent[i].style.display = "none";
         }
+
+        
     }
-    
 }
+
+
+
 function frame() {
     if (width >= 100) {
         currentStory++;
@@ -107,7 +128,15 @@ function frame() {
 }
 
 
-
+// document.addEventListener("click", (e) => {
+//     var click = e.composedPath()
+//     console.log(click)
+    
+//     click = click.includes(stories_block)
+//     console.log(click)
+//     if (!click) {
+//         storyBlocks[k].style.display = "none";
+//     } 
 
 
 
