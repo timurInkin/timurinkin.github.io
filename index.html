@@ -53,7 +53,7 @@
         <div class="story_container">
             <div class="content" id="content_about">
                 <div class="img_container">
-                    <img class="first">
+                    <img class="first"  num="0">
                 </div>
                 <div class="text_container">
                     обо мне
@@ -62,7 +62,7 @@
 
             <div class="content" id="content_edu">
                 <div class="img_container">
-                    <img class="second">
+                    <img class="second" num="1">
                 </div>
                 <div class="text_container">
                     образование
@@ -71,7 +71,7 @@
 
             <div class="content" id="content_exp">
                 <div class="img_container">
-                    <img class="third">
+                    <img class="third" num="2">
                 </div>
                 <div class="text_container">
                     опыт работы
@@ -80,7 +80,7 @@
 
             <div class="content" id="content_price">
                 <div class="img_container">
-                    <img class="four">
+                    <img class="four" num="3">
                 </div>
                 <div class="text_container">
                     цены
@@ -89,7 +89,7 @@
 
             <div class="content" id="content_methods">
                 <div class="img_container">
-                    <img class="five">
+                    <img class="five" num="4">
                 </div>
                 <div class="text_container">
                     методики
@@ -98,9 +98,7 @@
         </div> <!-- story_container -->
 
         <div class="record">
-            <button class="rec-btn" type="button" data-tab="#offline_record">записаться на офлайн-консультацию</button>
-            <button class="rec-btn" type="button" data-tab="#offline_record" onclick="move()">записаться на
-                офлайн-консультацию</button>
+            <button class="rec-btn" type="button" data-tab="#offline_record">записаться на консультацию</button>
         </div>
 
         <footer>
@@ -109,7 +107,8 @@
         </footer>
 
         <!-- Stories -->
-        <div class="stories" id="about">
+        <div class="stories" id="about" num="0">
+            <div class="left-side" id="switch"></div>
             <div class="stories_block" id="stories_block">
                 <div class="card_bars">
                     <div class="progress_bar_wrap">
@@ -156,11 +155,14 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- Stories Blocks in one story -->
+            </div> 
+            <div class="right-side" id="switch"></div>
+            <!-- Stories Blocks in one story -->
         </div> <!-- Story About -->
 
         <!-- Story Edu -->
-        <div class="stories" id="edu">
+        <div class="stories" id="edu" num="1">
+            <div class="left-side" id="switch"></div>
             <div class="stories_block stories_block--edu" id="stories_block">
                 <div class="card_bars">
                     <div class="progress_bar_wrap">
@@ -188,10 +190,12 @@
                     </div>
                 </div>
             </div>
+            <div class="right-side" id="switch"></div>
         </div> <!-- Story Edu -->
 
         <!-- Story Exp -->
-        <div class="stories" id="exp">
+        <div class="stories" id="exp" num="2">
+            <div class="left-side" id="switch"></div>
             <div class="stories_block stories_block--exp" id="stories_block">
                 <div class="card_bars">
                     <div class="progress_bar_wrap">
@@ -202,15 +206,17 @@
                     </div>
                 </div>
 
-                <div class="first_edu" id="story">
+                <div class="first_exp" id="story">
                     <div class="about_inner">
                         <div class="first_about_text">Мой опыт</div>
                     </div>
                 </div>
             </div>
+            <div class="right-side" id="switch"></div>
         </div> <!-- Story exp -->
 
-        <div class="stories" id="price">
+        <div class="stories" id="price" num="3">
+            <div class="left-side" id="switch"></div>
             <div class="stories_block stories_block--exp" id="stories_block">
                 <div class="card_bars">
                     <div class="progress_bar_wrap">
@@ -373,7 +379,6 @@
                 </div>
                 <!--Family Price-->
 
-
                 <!--Group-->
                 <div class="second_about second_about--price" id="story">
                     <h1 class="first_about_text first_about_text--price">Групповая терапия</h1>
@@ -422,12 +427,33 @@
                 </div>
                 <!--Group Price-->
             </div> <!-- Stories Block in one story -->
+            <div class="right-side" id="switch"></div>
         </div> <!-- Story price -->
+        <div class="form-container">
+            <div class="form-window">
+                <h1 class="form-header" >Записаться на консультацию</h1>
+                <form action="action.php" method="post">
+                    <input required type="text" id="name" name="name" placeholder="Имя">
+                    <input required type="email" id="email" name="email" placeholder="Почта">
+                    <input required type="tel" id="tel" name="tel" placeholder="Телефон">
+                    <label for="rec-type">Тип консультации</label>
+                    <select id="rec-type" name="rectype">
+                      <option value="empty">-</option>
+                      <option value="online">Онлайн</option>
+                      <option value="offline">Офлайн</option>
+                    </select>
+                    <label for="rec-date">Дата</label>
+                    <input id="rec-date" type="date" name="date">
+                    <textarea id="message" cols="30" rows="10" name="message" placeholder="Запрос"></textarea>
+                    <input type="submit" value="отправить">
+                  </form>
+            </div>
+        </div>
     </div>
     <!--main_container-->
 </body>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/newscript.js"></script>
 
 
 </html>

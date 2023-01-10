@@ -139,5 +139,19 @@ function frame() {
 //     } 
 
 
+// FORM
+
+let form = document.querySelector(".form-container");
+let recordButton = document.querySelector(".rec-btn")
+
+recordButton.addEventListener("click", () => {
+    form.style.display = "flex";
+})
+
+form.addEventListener("click", (event) => {
+    if (event.target.className == "form-container") {
+        form.style.display = "none"
+    }
+})
 
 
