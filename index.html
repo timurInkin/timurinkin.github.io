@@ -53,7 +53,7 @@
         <div class="story_container">
             <div class="content" id="content_about">
                 <div class="img_container">
-                    <img class="first"  num="0">
+                    <img class="first" num="0">
                 </div>
                 <div class="text_container">
                     обо мне
@@ -107,21 +107,21 @@
         </footer>
 
         <!-- Stories -->
-        <div class="stories" id="about" num="0">
-            <div class="left-side" id="switch"></div>
-            <div class="stories_block" id="stories_block">
+        <div class="stories" id="about">
+            
+        <!-- <div class="left-side" id="switch"></div> -->
+
+        <!-- About -->
+            <div class="stories_block" id="about" num="0">
                 <div class="card_bars">
-                    <div class="progress_bar_wrap">
-                        <div id="first" class="progress_bar"></div>
-                    </div>
-                    <div class="progress_bar_wrap">
-                        <div id="second" class="progress_bar"></div>
-                    </div>
+                    <div class="progress_bar_wrap"></div>
+                    <div class="progress_bar_wrap"></div>
                 </div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)""></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
 
                 <div class="first_about" id="story">
                     <div class="about_inner">
-
                         <div class="photo_stories_about"></div>
                         <h1 class="first_about_text">
                             Юлия Семерикова
@@ -156,22 +156,15 @@
                     </div>
                 </div>
             </div> 
-            <div class="right-side" id="switch"></div>
-            <!-- Stories Blocks in one story -->
-        </div> <!-- Story About -->
 
         <!-- Story Edu -->
-        <div class="stories" id="edu" num="1">
-            <div class="left-side" id="switch"></div>
-            <div class="stories_block stories_block--edu" id="stories_block">
+            <div class="stories_block" id="edu" num="1">
                 <div class="card_bars">
-                    <div class="progress_bar_wrap">
-                        <div id="first" class="progress_bar"></div>
-                    </div>
-                    <div class="progress_bar_wrap">
-                        <div id="second" class="progress_bar"></div>
-                    </div>
+                    <div class="progress_bar_wrap"></div>
+                    <div class="progress_bar_wrap"></div>
                 </div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
 
                 <div class="first_edu" id="story">
                     <div class="about_inner">
@@ -190,21 +183,14 @@
                     </div>
                 </div>
             </div>
-            <div class="right-side" id="switch"></div>
-        </div> <!-- Story Edu -->
 
         <!-- Story Exp -->
-        <div class="stories" id="exp" num="2">
-            <div class="left-side" id="switch"></div>
-            <div class="stories_block stories_block--exp" id="stories_block">
+            <div class="stories_block" id="exp" num="2">
                 <div class="card_bars">
-                    <div class="progress_bar_wrap">
-                        <div id="first" class="progress_bar"></div>
-                    </div>
-                    <div class="progress_bar_wrap">
-                        <div id="second" class="progress_bar"></div>
-                    </div>
+                    <div class="progress_bar_wrap"></div>
                 </div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
 
                 <div class="first_exp" id="story">
                     <div class="about_inner">
@@ -212,29 +198,20 @@
                     </div>
                 </div>
             </div>
-            <div class="right-side" id="switch"></div>
-        </div> <!-- Story exp -->
 
-        <div class="stories" id="price" num="3">
-            <div class="left-side" id="switch"></div>
-            <div class="stories_block stories_block--exp" id="stories_block">
+        <!-- Price -->
+            <div class="stories_block" id="price" num="3">
                 <div class="card_bars">
-                    <div class="progress_bar_wrap">
-                        <div id="first" class="progress_bar"></div>
-                    </div>
-                    <div class="progress_bar_wrap">
-                        <div id="second" class="progress_bar"></div>
-                    </div>
-                    <div class="progress_bar_wrap">
-                        <div id="third" class="progress_bar"></div>
-                    </div>
-                    <div class="progress_bar_wrap">
-                        <div id="four" class="progress_bar"></div>
-                    </div>
+                    <div class="progress_bar_wrap"></div>
+                    <div class="progress_bar_wrap"></div>
+                    <div class="progress_bar_wrap"></div>
+                    <div class="progress_bar_wrap"></div>
                 </div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
 
                 <!--Individ Price-->
-                <div class="second_about second_about--price" id="story">
+                <div class="first_price" id="story">
                     <h1 class="first_about_text first_about_text--price">Индивидуальная терапия</h1>
                     <div class="achive_column">
                         <div class="achive">
@@ -282,7 +259,7 @@
                 <!--Individ Price-->
 
                 <!--Couple Price-->
-                <div class="second_about second_about--price" id="story">
+                <div class="second_price" id="story">
                     <h1 class="first_about_text first_about_text--price">Парная терапия</h1>
                     <div class="achive_column">
                         <div class="achive">
@@ -330,7 +307,7 @@
                 <!--Couple Price-->
 
                 <!--Family-->
-                <div class="second_about second_about--price" id="story">
+                <div class="third_price" id="story">
                     <h1 class="first_about_text first_about_text--price">Семейная терапия</h1>
                     <div class="achive_column">
                         <div class="achive">
@@ -380,7 +357,7 @@
                 <!--Family Price-->
 
                 <!--Group-->
-                <div class="second_about second_about--price" id="story">
+                <div class="fourth_price" id="story">
                     <h1 class="first_about_text first_about_text--price">Групповая терапия</h1>
                     <span> *5-8 человек</span>
                     <div class="achive_column">
@@ -426,9 +403,11 @@
                     </div>
                 </div>
                 <!--Group Price-->
-            </div> <!-- Stories Block in one story -->
-            <div class="right-side" id="switch"></div>
-        </div> <!-- Story price -->
+            </div>
+            <!-- <div class="right-side" id="switch"></div> -->
+
+        </div>
+
         <div class="form-container">
             <div class="form-window">
                 <h1 class="form-header" >Записаться на консультацию</h1>

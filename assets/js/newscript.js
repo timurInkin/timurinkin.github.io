@@ -1,150 +1,98 @@
-let storyIcons = document.querySelectorAll(".img_container")
-let stories = document.querySelectorAll('.stories')
-let switchStory = document.querySelectorAll('#switch')
-let innerStories
-let storyNumber
-let innerStoryNumber = 0
 
-stories.forEach((elem) => elem.style.display = 'none')
-storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
-{
-    storyNumber = parseInt(event.target.getAttribute('num'));
-    stories[storyNumber].style.display = 'flex';
-    innerStories = stories[storyNumber].querySelectorAll('#story')
-    for (let i = 1; i < innerStories.length; i++) {
-      innerStories[i].style.display = 'none'
-    }
-    console.log('Main: ' + storyNumber)
-    console.log('Inner: ' + innerStoryNumber)
-}
-))
-
-switchStory.forEach((elem) => elem.addEventListener('click',(event) => {
-  if (event.target.className == 'left-side'){
-    switch (true) {
-      case (storyNumber == 0 && innerStoryNumber !== 0):
-        switchInnerStories(0);
-        break
-      case (storyNumber !== 0 && innerStoryNumber !== 0): 
-        switchInnerStories(0)
-        console.log('предыдущая история')
-        break
-      case (storyNumber !== 0 && innerStoryNumber == 0):
-        switchMainStories(0)
-        console.log('предыдущий блок')
-      break
-      // case (storyNumber == 0 && innerStoryNumber !== 0):
-    }
-  } else if (event.target.className == 'right-side'){
-    switch(true) {
-      case (innerStoryNumber == 3 && storyNumber == 3):
-        console.log('Конец')
-        break
-      case (innerStoryNumber !== innerStories.length-1): 
-      switchInnerStories(1)
-      console.log('следующая история')
-      break
-      case (innerStoryNumber == innerStories.length-1): 
-      switchMainStories(1)
-      console.log('следующий блок')
-      break
-    }
-  }
-  console.log('Main: ' + storyNumber)
-  console.log('Inner: ' + innerStoryNumber)
-}))
-
-
-
-function switchMainStories(property) {
-    stories[storyNumber].style.display = 'none';
-    if (property == 0) {
-      storyNumber--
-      stories[storyNumber].style.display = 'flex';
-      innerStories = stories[storyNumber].querySelectorAll('#story')
-      innerStories.forEach((elem) => elem.style.display = 'none')
-      for (let i = 1; i < innerStories.length; i++) {
-        innerStories[i].style.display = 'none'
-      }
-      // innerStories[innerStories.length-1].style.display = 'block'
-    } else if (property == 1) {
-      storyNumber++
-      stories[storyNumber].style.display = 'flex';
-      innerStories = stories[storyNumber].querySelectorAll('#story')
-      for (let i = 1; i < innerStories.length; i++) {
-        innerStories[i].style.display = 'none'
-      }
-    }
-    // stories[stories.length-1].style.display = 'block'
-    innerStoryNumber = 0
-  }
-
-function switchInnerStories(property) {
-  innerStories[innerStoryNumber].style.display = 'none';
-  if (property == 0) {
-    innerStoryNumber--
-  } else if (property ==1) {
-    innerStoryNumber++
-  }
-  innerStories[innerStoryNumber].style.display = 'block';
-}
-
-
-
-// function StartStories() {  
-//     let innerStories = stories[storyNumber].querySelectorAll('#story')
-//     console.log(innerStories)
-//     // innerStories.forEach((elem) => elem.style.display = 'none')
-//     Timer = setTimeout(function() {             
-//       if (storyNumber < 4) {
-//         StartInnerStories(innerStories)
-//         stories.forEach((elem) => elem.style.display = 'none')
-//         stories[storyNumber].style.display = 'flex';
-//         // console.log(storyNumber)
-//         StartStories();
-//       } else if (storyNumber == 4) {
-//         stories.forEach((elem) => elem.style.display = 'none')
-//       }
-//       storyNumber++;
-//     }, storyDelay)
-//   }
-
-
-// function StartInnerStories(innerStories) {
-//         // console.log(innerStoryNumber)
-//         if (innerStoryNumber < innerStories.length) {
-//             innerStoryNumber++;
-//             StartInnerStories(innerStories)
-//         } else if (innerStoryNumber = innerStories.length) return
-//         innerStoryNumber = 0
-// }
-
-
-// CLOSE STORIES
-
-// stories.forEach((elem) => elem.addEventListener('click', (event) => {
-//     if (event.target.className == 'stories') {
-//         event.target.style.display = 'none'
-//         clearTimeout(Timer)
-//     }
-// }))
-
-
-
-
-
-
-// FORM
+// // FORM
 
 let form = document.querySelector(".form-container");
 let recordButton = document.querySelector(".rec-btn")
 
 recordButton.addEventListener("click", () => {
     form.style.display = "flex";
+    document.body.style.overflow = 'hidden'
 })
 
 form.addEventListener("click", (event) => {
     if (event.target.className == "form-container") {
         form.style.display = "none"
+        document.body.style.overflow = 'none'
     }
 })
+
+
+let storyIcons = document.querySelectorAll(".img_container")
+let stories = document.querySelectorAll('.stories_block')
+let storyWrapper = document.querySelector('.stories')
+let innerStories
+let innerStoryCounter = 0
+// let switchStory
+let storyNumber = 0
+let progressBar
+
+stories.forEach((elem) => elem.style.display = 'none')
+storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
+{
+    storyWrapper.style.display = 'flex'
+    storyNumber = parseInt(event.target.getAttribute('num'));
+    renderStoryBlock(storyNumber)
+}
+))
+
+function switchStoryLeft(event) {
+  console.log(event.target)
+  if (innerStoryCounter !== 0) {
+    innerStoryCounter-=1
+    renderStory()
+  }  else if(innerStoryCounter == 0 && storyNumber !== 0) {
+    storyNumber-=1
+    innerStoryCounter = 0
+    innerStoryCounter = stories[storyNumber].querySelectorAll('#story').length -1
+    renderStoryBlock()
+  }
+  else if (storyNumber == 0 && innerStoryCounter == 0) {
+    closeStories()
+  }
+
+}
+
+function switchStoryRight(event) {
+  console.log(event.target)
+  if (innerStoryCounter !== innerStories.length - 1){
+      innerStoryCounter+=1
+      renderStory()
+    }  else if (storyNumber == stories.length -1 && innerStoryCounter == innerStories.length -1) {
+        closeStories()
+      } else if (innerStoryCounter == innerStories.length-1) {
+        storyNumber+=1
+        innerStoryCounter = 0;
+        renderStoryBlock()
+       }
+  }
+
+function renderStoryBlock() {
+    console.log(storyNumber)
+    stories.forEach((elem) => elem.style.display = 'none')
+    stories[storyNumber].style.display = 'flex';
+    renderStory()
+  }
+
+function renderStory() {
+    innerStories = stories[storyNumber].querySelectorAll('#story')
+    progressBar = stories[storyNumber].querySelectorAll('.progress_bar_wrap')
+    innerStories.forEach((elem) => elem.style.display = 'none')
+    innerStories[innerStoryCounter].style.display = 'block'
+    progressBar.forEach((elem) => elem.style.backgroundColor = 'white')
+    for (let i = 0; i < innerStoryCounter +1; i+=1){
+      progressBar[i].style.backgroundColor = 'black'
+    }
+}
+
+storyWrapper.addEventListener('click', (event) => {
+  if (event.target.className == 'stories'){
+    closeStories()
+  }
+})
+
+function closeStories() {
+  storyWrapper.style.display = 'none'
+    stories.forEach((elem) => elem.style.display = 'none')
+    storyNumber = 0
+    innerStoryCounter = 0
+}

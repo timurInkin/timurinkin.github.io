@@ -531,10 +531,10 @@ content:last-child {
 /*Card*/
 
 .stories {
-    display: flex;
+    display: none;
     /* justify-content: center; */
     /* align-items: flex-start; */
-    z-index: 10000;
+    z-index: 2000;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -543,41 +543,25 @@ content:last-child {
     position: fixed;
     top: 0;
     left: 0;
-
+    backdrop-filter: blur(10px);
 
 }
-
-
 
 .stories_block {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
     width: 350px;
-
-    /* height: 71.43vh; */
     height: 700px;
-
     padding: 17px 20px;
-
     border-radius: 27px;
-
-    cursor: pointer;
-
-    background-color: #E4B9B6;
+    background-color: rgb(228, 226, 226);
     border: 1px solid #000000;
-
-
-}
-
-.stories_block--edu {
-    background-color: #C7B4BC;
-
-}
-
-.stories_block--exp {
-    background-color: #B3ADC1;
-
 }
 
 .card_bars {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
@@ -588,18 +572,27 @@ content:last-child {
     width: 100%;
     height: 5px;
     border-radius: 10px;
-    background: #848380;
-}
-
-.progress_bar {
-    width: 0%;
-    height: 5px;
-    border-radius: 10px;
-    background: #fff;
+    background: white;
 }
 
 .progress_bar:first-child {
     margin-left: 0;
+}
+
+#switch {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 5000;
+}
+
+.left-side {
+    left: 0;
+}
+
+.right-side {
+    right: 0;
 }
 
 
@@ -633,7 +626,6 @@ content:last-child {
     font-weight: 400;
     font-size: 48px;
     line-height: 45px;
-
     margin-top: 15px ;
     color: #000000;
 }
