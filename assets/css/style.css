@@ -472,7 +472,7 @@ content:last-child {
     width: 35.4vw;
     height: 11.076vh;
     margin: 0 auto;
-    border-radius: 40px;
+    border-radius: 2.16vw;
     background-color: black;
     font-family: "Atyp-Medium";
 
@@ -491,7 +491,7 @@ content:last-child {
         width: 30vh;
         height: 4vh;
         margin-bottom: 1vh;
-        border-radius: 20px;
+        /* border-radius: 20px; */
         font-size: 1.42vh;
     }
 }
