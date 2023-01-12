@@ -582,6 +582,10 @@ content:last-child {
     background-color: #A9A5C0;
 }
 
+#methods {
+    background-color: #083A65;
+}
+
 
 
 .card_bars {
@@ -596,7 +600,7 @@ content:last-child {
     width: 100%;
     height: 5px;
     border-radius: 10px;
-    background: white;
+    background-color: #dedede;
 }
 
 .progress_bar:first-child {
@@ -605,18 +609,17 @@ content:last-child {
 
 #switch {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     height: 100%;
     width: 50%;
     z-index: 5000;
+    opacity: 0;
+    cursor: pointer;
 }
 
-#switch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0
-}
 
 .switch-active {
     opacity: 1;
@@ -982,7 +985,7 @@ input[type=submit] {
 } */
 
 .card-bars {
-    height: 5%;
+    height: 5% !important;
 }
 
 #story {

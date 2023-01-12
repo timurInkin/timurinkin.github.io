@@ -2,20 +2,31 @@
 // // FORM
 
 let form = document.querySelector(".form-container");
-let recordButton = document.querySelector(".rec-btn")
+let recordButton = document.querySelectorAll(".rec-btn")
 
-recordButton.addEventListener("click", () => {
-    form.style.display = "flex";
-    document.body.style.overflow = 'hidden'
-})
+recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
+  form.style.display = "flex";
+  document.body.style.overflow = 'hidden'
+  let online = document.querySelector('.online')
+  console.log(online)
+  let offline = document.querySelector('.offline')
+  if (event.target.classList.contains("rec-online")) {
+    online.setAttribute("selected","")
+  } else if(event.target.classList.contains("rec-offline")) {
+    offline.setAttribute("selected","")
+  }
+}))
+
 
 form.addEventListener("click", (event) => {
     if (event.target.className == "form-container") {
         form.style.display = "none"
-        document.body.style.overflow = 'none'
+        document.body.style.overflow = 'visible'
+        document.querySelectorAll('option').forEach((elem) => elem.removeAttribute("selected"))
     }
 })
 
+// STORIES
 
 let storyIcons = document.querySelectorAll(".img_container")
 let stories = document.querySelectorAll('.stories_block')
@@ -39,9 +50,6 @@ storyIcons.forEach((elem) => elem.addEventListener('click', (event) =>
       console.log('end')
       switchBar.forEach((elem2) => {elem2.classList.remove('switch-active')})
     }))
-    // arrowSwitch = stories[storyNumber].querySelectorAll('arrow-switch')
-    // console.log(arrowSwitch)
-    // arrowSwitch.forEach((elem) => elem.classList.add('arrow-switch-active'))
 }
 ))
 
@@ -87,9 +95,9 @@ function renderStory() {
     progressBar = stories[storyNumber].querySelectorAll('.progress_bar_wrap')
     innerStories.forEach((elem) => elem.style.display = 'none')
     innerStories[innerStoryCounter].style.display = 'block'
-    progressBar.forEach((elem) => elem.style.backgroundColor = 'white')
+    progressBar.forEach((elem) => elem.style.backgroundColor = '#dedede')
     for (let i = 0; i < innerStoryCounter +1; i+=1){
-      progressBar[i].style.backgroundColor = 'black'
+      progressBar[i].style.backgroundColor = '#ffffff'
     }
 }
 
@@ -102,10 +110,10 @@ storyWrapper.addEventListener('click', (event) => {
 
 function closeStories() {
   storyWrapper.style.display = 'none'
-    stories.forEach((elem) => elem.style.display = 'none')
-    document.body.style.overflow = 'visible'
-    storyNumber = 0
-    innerStoryCounter = 0
-    switchBar.forEach((elem) => {elem.classList.remove('switch-active')})
-    switchBar = 0
+  stories.forEach((elem) => elem.style.display = 'none')
+  document.body.style.overflow = 'visible'
+  storyNumber = 0
+  innerStoryCounter = 0
+  switchBar.forEach((elem) => {elem.classList.remove('switch-active')})
+  switchBar = 0
 }
