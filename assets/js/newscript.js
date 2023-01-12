@@ -22,16 +22,26 @@ let stories = document.querySelectorAll('.stories_block')
 let storyWrapper = document.querySelector('.stories')
 let innerStories
 let innerStoryCounter = 0
-// let switchStory
 let storyNumber = 0
 let progressBar
+let switchBar
 
 stories.forEach((elem) => elem.style.display = 'none')
 storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
 {
     storyWrapper.style.display = 'flex'
+    document.body.style.overflow = 'hidden'
     storyNumber = parseInt(event.target.getAttribute('num'));
     renderStoryBlock(storyNumber)
+    switchBar = stories[storyNumber].querySelectorAll('#switch')
+    switchBar.forEach((elem) => {elem.classList.add('switch-active')})
+    switchBar.forEach((elem) => elem.addEventListener('animationend', () => {
+      console.log('end')
+      switchBar.forEach((elem2) => {elem2.classList.remove('switch-active')})
+    }))
+    // arrowSwitch = stories[storyNumber].querySelectorAll('arrow-switch')
+    // console.log(arrowSwitch)
+    // arrowSwitch.forEach((elem) => elem.classList.add('arrow-switch-active'))
 }
 ))
 
@@ -53,7 +63,6 @@ function switchStoryLeft(event) {
 }
 
 function switchStoryRight(event) {
-  console.log(event.target)
   if (innerStoryCounter !== innerStories.length - 1){
       innerStoryCounter+=1
       renderStory()
@@ -85,7 +94,8 @@ function renderStory() {
 }
 
 storyWrapper.addEventListener('click', (event) => {
-  if (event.target.className == 'stories'){
+  if (event.target.classList.contains('stories')){
+    storyWrapper.classList.remove('stories-active')
     closeStories()
   }
 })
@@ -93,6 +103,9 @@ storyWrapper.addEventListener('click', (event) => {
 function closeStories() {
   storyWrapper.style.display = 'none'
     stories.forEach((elem) => elem.style.display = 'none')
+    document.body.style.overflow = 'visible'
     storyNumber = 0
     innerStoryCounter = 0
+    switchBar.forEach((elem) => {elem.classList.remove('switch-active')})
+    switchBar = 0
 }

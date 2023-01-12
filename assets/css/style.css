@@ -543,7 +543,7 @@ content:last-child {
     position: fixed;
     top: 0;
     left: 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 
 }
 
@@ -556,9 +556,28 @@ content:last-child {
     height: 700px;
     padding: 17px 20px;
     border-radius: 27px;
-    background-color: rgb(228, 226, 226);
+    /* background-color: rgb(228, 226, 226); */
     border: 1px solid #000000;
+    overflow: hidden;
 }
+
+#about {
+    background-color: #E4B9B6;
+}
+
+#edu {
+    background-color: #C7B4BC
+}
+
+#exp {
+    background-color: #B3ADC1;
+}
+
+#price {
+    background-color: #A9A5C0;
+}
+
+
 
 .card_bars {
     width: 100%;
@@ -587,12 +606,42 @@ content:last-child {
     z-index: 5000;
 }
 
+#switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0
+}
+
+.switch-active {
+    opacity: 1;
+    background-color: #000000;
+    animation: showSwitch 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes showSwitch {
+    /* 0% {background-color: rgba(0,0,0,1)}
+    100% {background-color: rgba(0,0,0,0)} */
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+
+#switch img {
+    width: 90%
+}
+
 .left-side {
     left: 0;
 }
 
 .right-side {
     right: 0;
+}
+
+.right-side img {
+    transform: rotate(180deg);
 }
 
 
@@ -811,6 +860,7 @@ content:last-child {
 }
 
 
+
 /* FORM */
 
 .form-container {
@@ -914,4 +964,22 @@ input[type=submit] {
 .left-side, .right-side {
     height:100%;
     width: calc((100%-350px)/2);
+}
+
+
+
+
+/* @media (max-width: 767px){
+    .stories_block {
+        height: 90%;
+        width: 70%;
+    }
+} */
+
+.card-bars {
+    height: 5%;
+}
+
+#story {
+    height: 95%;
 }
