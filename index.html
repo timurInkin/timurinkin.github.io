@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -98,7 +98,8 @@
         </div> <!-- story_container -->
 
         <div class="record">
-            <button class="rec-btn" type="button" data-tab="#offline_record">записаться на консультацию</button>
+            <button class="rec-btn rec-online" type="button" data-tab="#offline_record">записаться на онлайн-консультацию</button>
+            <button class="rec-btn rec-offline" type="button" data-tab="#offline_record">записаться на офлайн-консультацию</button>
         </div>
 
         <footer>
@@ -107,7 +108,7 @@
         </footer>
 
         <!-- Stories -->
-        <div class="stories" id="about">
+        <div class="stories">
             
         <!-- <div class="left-side" id="switch"></div> -->
 
@@ -117,9 +118,8 @@
                     <div class="progress_bar_wrap"></div>
                     <div class="progress_bar_wrap"></div>
                 </div>
-                <div class="left-side" id="switch" onclick="switchStoryLeft(event)""></div>
-                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
-
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)""> <img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
                 <div class="first_about" id="story">
                     <div class="about_inner">
                         <div class="photo_stories_about"></div>
@@ -163,8 +163,8 @@
                     <div class="progress_bar_wrap"></div>
                     <div class="progress_bar_wrap"></div>
                 </div>
-                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"></div>
-                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
 
                 <div class="first_edu" id="story">
                     <div class="about_inner">
@@ -189,8 +189,8 @@
                 <div class="card_bars">
                     <div class="progress_bar_wrap"></div>
                 </div>
-                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"></div>
-                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
 
                 <div class="first_exp" id="story">
                     <div class="about_inner">
@@ -207,8 +207,8 @@
                     <div class="progress_bar_wrap"></div>
                     <div class="progress_bar_wrap"></div>
                 </div>
-                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"></div>
-                <div class="right-side" id="switch" onclick="switchStoryRight(event)"></div>
+                <div class="left-side" id="switch" onclick="switchStoryLeft(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
+                <div class="right-side" id="switch" onclick="switchStoryRight(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
 
                 <!--Individ Price-->
                 <div class="first_price" id="story">
@@ -404,7 +404,21 @@
                 </div>
                 <!--Group Price-->
             </div>
-            <!-- <div class="right-side" id="switch"></div> -->
+
+        <!-- Methods -->
+        <div class="stories_block" id="methods" num="4">
+            <div class="card_bars">
+                <div class="progress_bar_wrap"></div>
+            </div>
+            <div class="left-side" id="switch" onclick="switchStoryLeft(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
+            <div class="right-side" id="switch" onclick="switchStoryRight(event)"><img class="arrow-switch" src="assets/img/arrow.svg" alt=""></div>
+
+            <div class="first_methods" id="story">
+                <div class="about_inner">
+                    <div class="first_about_text">Методики</div>
+                </div>
+            </div>
+        </div>
 
         </div>
 
@@ -417,9 +431,8 @@
                     <input required type="tel" id="tel" name="tel" placeholder="Телефон">
                     <label for="rec-type">Тип консультации</label>
                     <select id="rec-type" name="rectype">
-                      <option value="empty">-</option>
-                      <option value="online">Онлайн</option>
-                      <option value="offline">Офлайн</option>
+                      <option class="online" value="online">Онлайн</option>
+                      <option class="offline" value="offline">Офлайн</option>
                     </select>
                     <label for="rec-date">Дата</label>
                     <input id="rec-date" type="date" name="date">
