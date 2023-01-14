@@ -389,6 +389,7 @@ content:last-child {
     margin: 1vh auto;
     cursor: pointer;
     box-shadow: 0 0 0 .3vw #D9D9D9;
+    transition: 0.1s;
 }
 
 
@@ -908,6 +909,9 @@ content:last-child {
     width: 100%;
     border-top: 1px solid black;
 }
+.first_price, .second_price, .third_price, .fourth_price {
+    flex-direction: column;
+}
 
 
 
@@ -1017,21 +1021,146 @@ input[type=submit] {
 }
 
 
+.first_about_text-wrapper {
+    height: auto;
+}
 
 
-/* @media (max-width: 767px){
+/* MEDIA FOR STORIES */
+
+@media (max-width: 767px){
+
+    /* STORIES ICONS */
+
+    /* .content {
+        width: 10%;
+    } */
+
+    /* STORIES */
+
     .stories_block {
-        height: 90%;
+        height: 510px;
         width: 70%;
+        border-radius: 15px;
     }
-} */
+    .card-bars {
+        height: auto !important;
+    }
+    #story {
+        height: 95%;
+        width: 100%;
+    }
+    #story div {
+        width: 100%;
+    }
 
-.card-bars {
-    height: 5% !important;
+    /* About */ 
+
+    .photo_stories_about {
+        margin: 60px 0 30px 0;
+    }
+   
+
+    .about_text-wrapper h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .second_about {
+        margin-top: 30px;
+    }
+
+    .about_text-wrapper .achive_text {
+        font-size: 16px;
+    }
+
+    .second_about .circular_photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Edu */
+    .edu_text-wrapper {
+        margin: 10px 0 0 0;
+    }
+
+    .edu_text-wrapper h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    /* Exp */
+
+    .exp_text-wrapper {
+        margin: 10px 0 0 0;
+    }
+
+    .exp_text-wrapper h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    /* Price */
+
+    .price_text-wrapper{
+        margin-top: 10px;
+        width: 100%;
+        min-height: 55px;
+    }
+    .price_text-wrapper h1 {
+        margin:0;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .achive_column {
+        padding-top: 10px;
+    }
+    .achive {
+        height: 35px;
+        align-items:center;
+        padding: 0 0 0 15px;
+        margin: 0 0 20px 0
+    }
+    .achive_icon {
+        display: flex;
+        align-items: center;
+        height: auto !important;
+        width: auto !important;
+        /* margin-right: 5px; */
+    }
+
+    /* Methods */
+    .methods_text-wrapper {
+        margin-top: 10px;
+        width: 100%;
+        min-height: 55px;
+    }
+    .methods_text-wrapper h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    /* FORM */
+
+
+    .form-window {
+        padding: 20px;
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        border-radius: 30px;
+        border: 2px solid black;
+    }
+
+    .form-header {
+        line-height: 28px;
+    }
 }
 
-#story {
-    height: 95%;
+
+
+@media(max-width: 321px) {
+    textarea {
+        height: 50px !important;
+    }
 }
-
-
