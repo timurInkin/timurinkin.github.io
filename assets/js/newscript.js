@@ -1,6 +1,32 @@
 
 // // FORM
 
+// Form submit
+let HTMLForm = document.querySelector('form')
+HTMLForm.addEventListener('submit',formSubmit)
+
+
+
+function formSubmit(event) {
+  event.preventDefault()
+  let name = document.querySelector('#name').value
+  let email = document.querySelector('#email').value
+  let tel = document.querySelector('#tel').value
+  let rectype = document.querySelector('#rec-type').value
+  let recdate = document.querySelector('#rec-date').value
+  let message = document.querySelector('#message').value
+
+  let data = "name="+name+"&email="+email+"&tel="+tel+"&rectype="+rectype+"&recdate="+recdate+"&message="+message
+  var request = new XMLHttpRequest();
+  request.open("POST", "action.php", true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(data);
+  console.log(data)
+  alert('Заявка отправлена')
+}
+
+// Form open
+
 let form = document.querySelector(".form-container");
 let recordButton = document.querySelectorAll(".rec-btn")
 
@@ -24,6 +50,7 @@ form.addEventListener("click", (event) => {
         document.querySelectorAll('option').forEach((elem) => elem.removeAttribute("selected"))
     }
 })
+
 
 // STORIES
 
