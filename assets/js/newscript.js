@@ -8,7 +8,6 @@ recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
   form.style.display = "flex";
   document.body.style.overflow = 'hidden'
   let online = document.querySelector('.online')
-  console.log(online)
   let offline = document.querySelector('.offline')
   if (event.target.classList.contains("rec-online")) {
     online.setAttribute("selected","")
@@ -28,7 +27,7 @@ form.addEventListener("click", (event) => {
 
 // STORIES
 
-let storyIcons = document.querySelectorAll(".img_container")
+let storyIcons = document.querySelectorAll(".img_container img")
 let stories = document.querySelectorAll('.stories_block')
 let storyWrapper = document.querySelector('.stories')
 let innerStories
@@ -47,14 +46,12 @@ storyIcons.forEach((elem) => elem.addEventListener('click', (event) =>
     switchBar = stories[storyNumber].querySelectorAll('#switch')
     switchBar.forEach((elem) => {elem.classList.add('switch-active')})
     switchBar.forEach((elem) => elem.addEventListener('animationend', () => {
-      console.log('end')
       switchBar.forEach((elem2) => {elem2.classList.remove('switch-active')})
     }))
 }
 ))
 
 function switchStoryLeft(event) {
-  console.log(event.target)
   if (innerStoryCounter !== 0) {
     innerStoryCounter-=1
     renderStory()
@@ -84,7 +81,6 @@ function switchStoryRight(event) {
   }
 
 function renderStoryBlock() {
-    console.log(storyNumber)
     stories.forEach((elem) => elem.style.display = 'none')
     stories[storyNumber].style.display = 'flex';
     renderStory()
@@ -94,7 +90,8 @@ function renderStory() {
     innerStories = stories[storyNumber].querySelectorAll('#story')
     progressBar = stories[storyNumber].querySelectorAll('.progress_bar_wrap')
     innerStories.forEach((elem) => elem.style.display = 'none')
-    innerStories[innerStoryCounter].style.display = 'block'
+    // тут был block
+    innerStories[innerStoryCounter].style.display = 'flex' 
     progressBar.forEach((elem) => elem.style.backgroundColor = '#dedede')
     for (let i = 0; i < innerStoryCounter +1; i+=1){
       progressBar[i].style.backgroundColor = '#ffffff'
