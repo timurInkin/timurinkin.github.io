@@ -114,3 +114,8 @@ function closeStories() {
   switchBar.forEach((elem) => {elem.classList.remove('switch-active')})
   switchBar = 0
 }
+
+
+
+
+
