@@ -5,8 +5,6 @@
 let HTMLForm = document.querySelector('form')
 HTMLForm.addEventListener('submit',formSubmit)
 
-
-
 function formSubmit(event) {
   event.preventDefault()
   let name = document.querySelector('#name').value
@@ -69,6 +67,8 @@ let innerStoryCounter = 0
 let storyNumber = 0
 let progressBar
 let switchBar
+
+
 
 stories.forEach((elem) => elem.style.display = 'none')
 storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
@@ -147,7 +147,6 @@ function closeStories() {
   switchBar.forEach((elem) => {elem.classList.remove('switch-active')})
   switchBar = 0
 }
-
 
 $(".custom-carousel").owlCarousel({
   autoWidth: true,
