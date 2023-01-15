@@ -147,11 +147,6 @@ function closeStories() {
 }
 
 
-<<<<<<< HEAD
-
-
-
-=======
 $(".custom-carousel").owlCarousel({
   autoWidth: true,
   loop: true
@@ -162,4 +157,3 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 });
->>>>>>> f08fa001df5e4f09a2299c89e98a6b9b84ea964a
