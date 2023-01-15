@@ -148,8 +148,6 @@ function closeStories() {
   switchBar = 0
 }
 
-
-
 $(".custom-carousel").owlCarousel({
   autoWidth: true,
   loop: true
