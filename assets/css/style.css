@@ -32,6 +32,7 @@ body {
     font-weight: 400;
     font-size: 1.68vh;
     line-height: 2.53vh;
+    border: 0px;
 
 }
 
@@ -493,6 +494,12 @@ content:last-child {
 
     color: #FFFFFF;
     cursor: pointer;
+    transition: .5s;
+}
+.rec-btn:hover {
+    background-color: white;
+    color: #000000;
+    transition: .5s;
 }
 
 @media (max-width: 1024px) {
