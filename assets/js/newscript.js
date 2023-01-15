@@ -15,10 +15,12 @@ function formSubmit(event) {
   let rectype = document.querySelector('#rec-type').value
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
-  if (tel[0] == '8') {
-    tel[0] = '7'
-    console.log(tel)
-  }
+
+  
+  // if (tel[0] == '8') {
+  //   tel[0] = '7'
+  //   console.log(tel)
+  // }
 
 
   let data = "name="+name+"&email="+email+"&tel="+tel+"&rectype="+rectype+"&recdate="+recdate+"&message="+message
