@@ -15,6 +15,11 @@ function formSubmit(event) {
   let rectype = document.querySelector('#rec-type').value
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
+  if (tel[0] == '8') {
+    tel[0] = '7'
+    console.log(tel)
+  }
+
 
   let data = "name="+name+"&email="+email+"&tel="+tel+"&rectype="+rectype+"&recdate="+recdate+"&message="+message
   var request = new XMLHttpRequest();
@@ -117,7 +122,6 @@ function renderStory() {
     innerStories = stories[storyNumber].querySelectorAll('#story')
     progressBar = stories[storyNumber].querySelectorAll('.progress_bar_wrap')
     innerStories.forEach((elem) => elem.style.display = 'none')
-    // тут был block
     innerStories[innerStoryCounter].style.display = 'flex' 
     progressBar.forEach((elem) => elem.style.backgroundColor = '#dedede')
     for (let i = 0; i < innerStoryCounter +1; i+=1){
@@ -141,3 +145,21 @@ function closeStories() {
   switchBar.forEach((elem) => {elem.classList.remove('switch-active')})
   switchBar = 0
 }
+
+
+<<<<<<< HEAD
+
+
+
+=======
+$(".custom-carousel").owlCarousel({
+  autoWidth: true,
+  loop: true
+});
+$(document).ready(function () {
+  $(".custom-carousel .item").click(function () {
+    $(".custom-carousel .item").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});
+>>>>>>> f08fa001df5e4f09a2299c89e98a6b9b84ea964a
