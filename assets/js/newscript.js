@@ -5,8 +5,6 @@
 let HTMLForm = document.querySelector('form')
 HTMLForm.addEventListener('submit',formSubmit)
 
-
-
 function formSubmit(event) {
   event.preventDefault()
   let name = document.querySelector('#name').value
@@ -15,10 +13,12 @@ function formSubmit(event) {
   let rectype = document.querySelector('#rec-type').value
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
-  if (tel[0] == '8') {
-    tel[0] = '7'
-    console.log(tel)
-  }
+
+  
+  // if (tel[0] == '8') {
+  //   tel[0] = '7'
+  //   console.log(tel)
+  // }
 
 
   let data = "name="+name+"&email="+email+"&tel="+tel+"&rectype="+rectype+"&recdate="+recdate+"&message="+message
@@ -67,6 +67,8 @@ let innerStoryCounter = 0
 let storyNumber = 0
 let progressBar
 let switchBar
+
+
 
 stories.forEach((elem) => elem.style.display = 'none')
 storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
@@ -147,6 +149,7 @@ function closeStories() {
 }
 
 
+
 $(".custom-carousel").owlCarousel({
   autoWidth: true,
   loop: true
@@ -156,4 +159,5 @@ $(document).ready(function () {
     $(".custom-carousel .item").not($(this)).removeClass("active");
     $(this).toggleClass("active");
   });
+
 });
