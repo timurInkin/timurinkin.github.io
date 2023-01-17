@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="owlCarousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="owlCarousel/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
     <title>Полиграфиолог | Юлия</title>
 </head>
@@ -104,7 +105,7 @@
             <button class="rec-btn rec-online" type="button" data-tab="#offline_record">записаться на онлайн-консультацию</button>
             <button class="rec-btn rec-offline" type="button" data-tab="#offline_record">записаться на офлайн-консультацию</button>
         </div>
-        <section class="game-section">
+        <!-- <section class="game-section">
             <h2 class="line-title">trending games</h2>
             <div class="owl-carousel custom-carousel owl-theme">
               <div class="item active" style="background-image: url(https://ucarecdn.com/75d7700d-c102-40ff-9ba1-f0641444c616/dota2.jpg);">
@@ -150,8 +151,23 @@
                 </div>
               </div>
             </div>
+        </section> -->
+
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
             </div>
-          </section>
+            <div class="swiper-pagination"></div>
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+          </div>
+
 
         <section class="blog">
             <div class="blog-window">
@@ -166,12 +182,11 @@
                 </div>
             </div>
         </section>
-
-        
-
         <footer class="footer">
-            <a class="footer_link" href="callto:">+7(912) 765-77-72</a>
-            <a class="footer_link" href="mailto:">julia@gmail.com</a>
+            <div class="footer-wrapper">
+                <a class="footer_link" href="callto:">+7(912) 765-77-72</a>
+                <a class="footer_link" href="mailto:">julia@gmail.com</a>
+            </div>
         </footer>
 
         <!-- Stories -->
@@ -503,7 +518,6 @@
                   </form>
             </div>
         </div>
-
     </div>
     <!--main_container-->
 
@@ -512,6 +526,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="owlCarousel/owl.carousel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 <script src="assets/js/newscript.js"></script>
 
 </html>

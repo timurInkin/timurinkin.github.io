@@ -14,11 +14,13 @@ function formSubmit(event) {
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
 
-  
-  // if (tel[0] == '8') {
-  //   tel[0] = '7'
-  //   console.log(tel)
-  // }
+  if (tel[0] == '+') {
+    tel = tel.substring(1,tel.length)
+  }
+
+  if (tel[0] == '8') {
+    tel = '7' + tel.substring(1, tel.length)
+  }
 
 
   let data = "name="+name+"&email="+email+"&tel="+tel+"&rectype="+rectype+"&recdate="+recdate+"&message="+message
@@ -26,8 +28,6 @@ function formSubmit(event) {
   request.open("POST", "action.php", true);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.send(data);
-  console.log(data)
-  alert('Заявка отправлена')
 }
 
 // Form open
@@ -158,4 +158,27 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
+});
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    // el: '.swiper-scrollbar',
+  },
 });
