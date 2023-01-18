@@ -162,9 +162,9 @@ h6 {
 
     }
 
-    .intro_inner_item:first-child {
-        /* margin-bottom: 3.25vw; */
-    }
+    /* .intro_inner_item:first-child {
+         margin-bottom: 3.25vw; 
+    } */
 
     .intro_inner_item:last-child {
         border-bottom: none;
