@@ -148,37 +148,18 @@ function closeStories() {
   switchBar = 0
 }
 
-$(".custom-carousel").owlCarousel({
-  autoWidth: true,
-  loop: true
-});
-$(document).ready(function () {
-  $(".custom-carousel .item").click(function () {
-    $(".custom-carousel .item").not($(this)).removeClass("active");
-    $(this).toggleClass("active");
+$(document).ready(function(){
+  $('.slider').slick({
+    infinite: true,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 1000,
+    cssEase: 'linear',
   });
-
 });
 
-
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    // el: '.swiper-scrollbar',
-  },
+$('.slider').on('mouseover', function() {
+  $('.slider').slick('slickPause');
 });
