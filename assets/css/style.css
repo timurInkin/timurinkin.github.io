@@ -37,7 +37,6 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box
-
 }
 
 
@@ -107,10 +106,12 @@ h6 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 73vw;
+    /* width: 73vw; */
+    width: 78.75vw;
+
     /* max-width: 1435px; */
     /* min-width: 1435px; */
-    padding: 5.4vh 1.1vw 1.62vh 1.1vw;
+    padding: 6.2vh 9.948vw 0 9.948vw;
 }
 
 @media (max-width: 1023px) {
@@ -241,8 +242,8 @@ h6 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.68vh;
-    line-height: 2.53vh;
+    font-size: .833vw;
+    line-height: 1.25vw;
 
 
     letter-spacing: 0.005vw;
@@ -271,22 +272,16 @@ h6 {
     height: 730px;
     width: 28.65vw;
     height: 38vw;
-
     z-index: 1000;
     overflow: hidden;
-
 }
 
 
 .intro_photo {
     position: absolute;
-    /* background-size: cover; */
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-
-
 }
 
 
@@ -346,12 +341,13 @@ h6 {
 
 .story_container {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-around;
     /* padding: 0 4.73vw; */
     width: 100%;
     max-width: 1130px;
 
     margin-bottom: 2.292vw;
+    
 }
 
 @media (max-width: 1370px) {
@@ -666,7 +662,7 @@ footer {
     background: rgb(227, 185, 183);
     background: linear-gradient(0deg, rgba(227, 185, 183, 1) 5%, rgba(170, 166, 192, 1) 53%);
     margin-top: 10vh;
-    
+
     padding: 6vh;
 
 }
@@ -808,6 +804,17 @@ footer {
 #about {
     background-color: #E4B9B6;
 }
+/* .stories_block:first-child {
+    padding: 0;
+    margin: 0;
+}  */
+
+/* .stories_block div#story.first_about {
+    background-image: url("../img/ju_pic.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+} */
 
 #edu {
     background-color: #C7B4BC
@@ -842,7 +849,7 @@ footer {
     background-color: #dedede;
 }
 
-.progress_bar:first-child {
+.progress_bar_wrap:first-child {
     margin-left: 0;
 }
 
@@ -899,40 +906,36 @@ footer {
 
 
 /*About*/
+
 .first_about {
-    /* margin-top: 150px; */
     display: flex;
-    flex-direction: column;
-
-    /* justify-content: center; */
-    /* align-items: center; */
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    /* margin-bottom: 95px; */
+}
+.about_inner {
+    margin-bottom: 95px;
+    padding: 17px 20px;
 }
 
-.photo_stories_about {
-    /* margin: auto; */
-    margin: 60px auto;
-    height: 224px;
-    width: 224px;
-
-    background-image: url("http://placeimg.com/180/110/any");
-    background-size: cover;
-
-
+.about_text-wrapper div {
+    color: white;
+    
 }
 
-.first_about_text {
-    /* margin-top: 3vh; */
-
-    font-family: 'Atyp-Medium';
+.header_stories {
+    font-family: 'Atyp Display';
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
     line-height: 45px;
     margin-top: 15px;
-    color: #000000;
+    color: black;
+    text-align: left;
 }
 
-.first_about_text--price {
+.header_stories--price {
     font-size: 36px;
     height: 90px;
 }
@@ -960,7 +963,7 @@ footer {
 
     height: 6px;
 
-    background-color: #000000;
+    background-color: white;
 
     box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
 
@@ -984,7 +987,7 @@ footer {
 
     right: -5px;
 
-    background-color: #000000;
+    background-color: white;
 
     box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
 
@@ -1009,7 +1012,7 @@ footer {
 
     right: -5px;
 
-    background-color: #000000;
+    background-color: white;
 
     transform: matrix(0.71, 0.66, -0.76, 0.71, 0, 0);
     /* transform: rotate(45deg); */
@@ -1138,8 +1141,8 @@ footer {
 
 .form-window {
     padding: 20px;
-    width: 500px;
-    height: 600px;
+    width: 576.62px;
+    height: 800px;
     background-color: #fff;
     border-radius: 30px;
     border: 2px solid black;
@@ -1230,7 +1233,7 @@ input[type=submit] {
 }
 
 
-.first_about_text-wrapper {
+.header_stories-wrapper {
     height: auto;
 }
 
@@ -1267,6 +1270,8 @@ input[type=submit] {
         width: 100%;
         margin: 0;
         padding: 20px;
+        
+        
         scroll-snap-align: center;
     }
 
