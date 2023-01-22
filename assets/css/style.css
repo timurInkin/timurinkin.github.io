@@ -804,20 +804,8 @@ footer {
     text-transform: lowercase;
 }
 
+
 .footer_2 {
-    width: 49vh;
-    max-width: 480px;
-    /* max-height: 84px; */
-    padding: 1.667vw 1.875vw;
-    border: 1px solid black;
-    border-radius: 40px;
-    text-align: center;
-    margin-bottom: 3vh;
-
-
-}
-
-.footer-2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -827,6 +815,7 @@ footer {
     border: 1px solid black;
     border-radius: 100px;
     text-align: center;
+}
 .footer_2 span {
     width: 100%;
     font-family: "Montserrat", sans-serif;
