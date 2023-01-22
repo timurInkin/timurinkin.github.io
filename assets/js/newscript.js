@@ -10,15 +10,17 @@ function formSubmit(event) {
   let name = document.querySelector('#name').value
   let email = document.querySelector('#email').value
   let tel = document.querySelector('#tel').value
-  let rectype = document.querySelector('#rec-type').value
+  let rectype = document.querySelector('.rec-type').value
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
 
-  
-  // if (tel[0] == '8') {
-  //   tel[0] = '7'
-  //   console.log(tel)
-  // }
+  if (tel[0] == '+') {
+    tel = tel.substring(1,tel.length)
+  }
+
+  if (tel[0] == '8') {
+    tel = '7' + tel.substring(1, tel.length)
+  }
 
 
   let data = "name="+name+"&email="+email+"&tel="+tel+"&rectype="+rectype+"&recdate="+recdate+"&message="+message
@@ -26,8 +28,12 @@ function formSubmit(event) {
   request.open("POST", "action.php", true);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.send(data);
-  console.log(data)
-  alert('Заявка отправлена')
+  HTMLForm.reset();
+  let submitMessage = document.createElement('p')
+  submitMessage.innerHTML = "Заявка отправлена"
+  submitMessage.className = "submit-message"
+  HTMLForm.append(submitMessage);
+  setTimeout(() => {submitMessage.remove()}, 2000);
 }
 
 // Form open
@@ -38,12 +44,12 @@ let recordButton = document.querySelectorAll(".rec-btn")
 recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
   form.style.display = "flex";
   document.body.style.overflow = 'hidden'
-  let online = document.querySelector('.online')
-  let offline = document.querySelector('.offline')
+  let online = document.querySelector('#rec-online')
+  let offline = document.querySelector('#rec-offline')
   if (event.target.classList.contains("rec-online")) {
-    online.setAttribute("selected","")
+    online.setAttribute("checked","")
   } else if(event.target.classList.contains("rec-offline")) {
-    offline.setAttribute("selected","")
+    offline.setAttribute("checked","")
   }
 }))
 
@@ -129,6 +135,14 @@ function renderStory() {
     for (let i = 0; i < innerStoryCounter +1; i+=1){
       progressBar[i].style.backgroundColor = '#ffffff'
     }
+    // set bg image when opened first story
+    if (storyNumber == 0 && innerStoryCounter == 0) {
+      stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
+      stories[storyNumber].style.backgroundSize = "cover"
+    } else {
+      stories[storyNumber].style.backgroundImage = "none"
+      stories[storyNumber].style.backgroundSize = "cover"
+    }
 }
 
 storyWrapper.addEventListener('click', (event) => {
@@ -148,16 +162,53 @@ function closeStories() {
   switchBar = 0
 }
 
+let sliderParams = {
+  infinite: false,
+  dots: true,
+  arrows: false,
+  autoplay: false,
+  // autoplaySpeed: 0,
+  speed: 500,
+  cssEase: 'linear',
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 2,
+        }
+    },
+]
+}
 
-
-$(".custom-carousel").owlCarousel({
-  autoWidth: true,
-  loop: true
+document.addEventListener("DOMContentLoaded", function(){
+  $('.slider').slick(sliderParams);
 });
-$(document).ready(function () {
-  $(".custom-carousel .item").click(function () {
-    $(".custom-carousel .item").not($(this)).removeClass("active");
-    $(this).toggleClass("active");
-  });
 
-});
+// document.querySelector('.slider').addEventListener('mouseover', () => {
+//   $('.slider').slick('slickPause');
+//   $('.slider').slick('slickSetOption', 'speed', 600)
+// })
+
+let firstSlide = document.querySelectorAll(".first-slide")
+let secondSlide = document.querySelectorAll(".second-slide")
+
+console.log(secondSlide)
+
+let firstTab = document.querySelector(".first-tab")
+let secondTab = document.querySelector(".second-tab")
+
+let toggle = document.querySelector(".toggle-active")
+
+firstTab.addEventListener("click", () => {
+  firstSlide.forEach((elem) => elem.style.display = "block")
+  secondSlide.forEach((elem) => elem.style.display = "none")
+  toggle.style.left = "0%"
+})
+
+secondTab.addEventListener("click", () => {
+  firstSlide.forEach((elem) => elem.style.display = "none")
+  secondSlide.forEach((elem) => elem.style.display = "block")
+  toggle.style.left = "50%"
+})

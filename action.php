@@ -1,13 +1,13 @@
 <?php
     // $data = json_decode(file_get_contents('php://input'))
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $tel = $_POST['tel'];
-    $rectype = $_POST['rectype'];
-    $date = $_POST['recdate'];
-    $message = $_POST['message'];
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $tel = htmlspecialchars(trim($_POST['tel']));
+    $rectype = htmlspecialchars(trim($_POST['rectype']));
+    $date = htmlspecialchars(trim($_POST['recdate']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
-    $tel = "+".trim($tel);
+    $tel = "+".$tel;
 
     $tg_user = '707407552'; // id пользователя в telegram
     $bot_token = '5754041486:AAEmu9TfHVsMF0LssZqzza6TM_E_j7c0Yas'; // токен бота
