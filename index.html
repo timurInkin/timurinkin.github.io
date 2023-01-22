@@ -9,11 +9,11 @@
     <meta name="keywords"
         content="Семерикова, Юлия, консультация, Полиграфиолог, полиграф, проверка, подбор, няня, охрана, расследование, помощь">
     <meta name="description" content="">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/slick.css"/>
     <link rel="stylesheet" href="assets/css/slick-theme.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Полиграфиолог | Юлия</title>
 </head>
@@ -108,10 +108,25 @@
                 офлайн-консультацию</button>
         </div>
     
-        <div class="slider">
-              <div class="slide slide-1"><p>Slide 1</p></div>
-              <div class="slide slide-2"><p>Slide 2</p></div>
-              <div class="slide slide-3"><p>Slide 3</p></div>
+        <div class="slider-wrapper">
+            <h2 class="slider-header">Сертификаты</h2>
+            <div class="slider-tabs">
+                <div class="tabs">
+                    <span class="first-tab">Межнар</span>
+                    <span class="second-tab">Прочее</span>
+                </div>
+                <div class="toggle">
+                    <div class="toggle-active"></div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slide slide-1"><div class="first-slide"><img src="https://api.lorem.space/image/movie?w=300&h=450&hash=8B7BCDC2"></div><div class="second-slide"><img src="https://api.lorem.space/image/game?w=300&h=450&hash=2D297A22"></div></div>
+                <div class="slide slide-2"><div class="first-slide"><img src="https://api.lorem.space/image/movie?w=300&h=450&hash=500B67FB"></div><div class="second-slide"><img src="https://api.lorem.space/image/game?w=300&h=450&hash=9D9539E7"></div></div>
+                <div class="slide slide-3"><div class="first-slide"><img src="https://api.lorem.space/image/movie?w=300&h=450&hash=A89D0DE6"></div><div class="second-slide"><img src="https://api.lorem.space/image/game?w=300&h=450&hash=8B7BCDC2"></div></div>
+                <div class="slide slide-4"><div class="first-slide"><img src="https://api.lorem.space/image/movie?w=300&h=450&hash=225E6693"></div><div class="second-slide"><img src="https://api.lorem.space/image/game?w=300&h=450&hash=A89D0DE6"></div></div>
+                <div class="slide slide-5"><div class="first-slide"><img src="https://api.lorem.space/image/movie?w=300&h=450&hash=9D9539E7"></div><div class="second-slide"><img src="https://api.lorem.space/image/game?w=300&h=450&hash=500B67FB"></div></div>
+                <div class="slide slide-6"><div class="first-slide"><img src="https://api.lorem.space/image/movie?w=300&h=450&hash=4F32C4CF"></div><div class="second-slide"><img src="https://api.lorem.space/image/game?w=300&h=450&hash=BDC01094"></div></div>
+            </div>
         </div>
 
         <section class="blog">
@@ -503,10 +518,12 @@
                 <input required type="email" id="email" name="email" placeholder="Почта">
                 <input required type="tel" id="tel" name="tel" placeholder="Телефон">
                 <label for="rec-type">Тип консультации</label>
-                <select id="rec-type" name="rectype">
-                    <option class="online" value="online">Онлайн</option>
-                    <option class="offline" value="offline">Офлайн</option>
-                </select>
+                <div class="rec-type">
+                    <input type="radio" id="rec-online" name="rec-type" value="online">
+                    <label for="rec-online">Онлайн</label>
+                    <input type="radio" id="rec-offline" name="rec-type" value="offline">
+                    <label for="rec-offline">Офлайн</label>
+                </div>
                 <label for="rec-date">Дата</label>
                 <input id="rec-date" type="date" name="date">
                 <textarea id="message" cols="30" rows="10" name="message" placeholder="Запрос"></textarea>
