@@ -36,7 +36,19 @@ body {
     border: 0px;
     padding: 0;
     margin: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    background-color: rgba(230, 214, 213, 0.23);
+    background-image:
+        radial-gradient(at 64% 24%, hsla(2, 47%, 80%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(335, 13%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 11% 38%, hsla(257, 14%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 73% 58%, hsla(248, 17%, 70%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(208, 85%, 21%, 1) 0px, transparent 50%);
+    animation: footer 10s infinite linear;
+    background: blur(5px);
+
+    background-size: 400%;
+
 }
 
 
@@ -106,12 +118,20 @@ h6 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    margin-top: 3vh;
     /* width: 73vw; */
     width: 78.75vw;
+    z-index: 1000;
 
     /* max-width: 1435px; */
     /* min-width: 1435px; */
-    padding: 6.2vh 9.948vw 0 9.948vw;
+    padding: 6.2vh 9.948vw;
+
+    background: rgba(255, 255, 255, 0.54);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 @media (max-width: 1023px) {
@@ -121,6 +141,8 @@ h6 {
 
     }
 }
+
+.glass {}
 
 .intro {
     display: flex;
@@ -146,7 +168,7 @@ h6 {
     height: 38vw;
     width: 28.65vw;
 
-    background-color: white;
+    /* background-color: white; */
     border: 1px solid #000000;
     padding: 1.25vw 1.35vw;
 }
@@ -659,19 +681,17 @@ footer {
     max-height: 400px;
     margin-top: 10vh;
     padding: 6vh;
-    background-color:#99acff;
-    background:
-        radial-gradient(at 77% 68%, hsla(41, 96%, 64%, 1) 5px, transparent 50%),
-        radial-gradient(at 67% 7%, hsla(74, 74%, 61%, 1) 5px, transparent 50%),
-        radial-gradient(at 81% 22%, hsla(272, 79%, 63%, 1) 5px, transparent 50%),
-        radial-gradient(at 41% 97%, hsla(77, 87%, 66%, 1) 5px, transparent 50%),
-        radial-gradient(at 43% 8%, hsla(127, 85%, 79%, 1) 5px, transparent 50%),
-        radial-gradient(at 87% 49%, hsla(96, 87%, 77%, 1) 5px, transparent 50%),
-        radial-gradient(at 12% 45%, hsla(197, 68%, 64%, 1) 5px, transparent 50%);
+    /* background-color: hsla(266, 56%, 85%, 1);
+    background-image:
+        radial-gradient(at 64% 24%, hsla(2, 47%, 80%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(335, 13%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 11% 38%, hsla(257, 14%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 73% 58%, hsla(248, 17%, 70%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(208, 85%, 21%, 1) 0px, transparent 50%);
     animation: footer 10s infinite linear;
-    /* 10s - скорость анимации*/
-    background-size: 400%;
-    /*Можно менять и подбирать интенсивность*/
+    background: blur(5px);
+
+    background-size: 400%; */
 }
 
 @keyframes footer {
