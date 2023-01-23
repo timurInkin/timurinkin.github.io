@@ -268,8 +268,8 @@ h6 {
     position: relative;
     margin-top: 5.26vh;
     margin-left: -2.7vw;
-    width: 560px;
-    height: 730px;
+    /* width: 560px;
+    height: 730px; */
     width: 28.65vw;
     height: 38vw;
     z-index: 1000;
@@ -347,7 +347,7 @@ h6 {
     max-width: 1130px;
 
     margin-bottom: 2.292vw;
-    
+
 }
 
 @media (max-width: 1370px) {
@@ -539,9 +539,7 @@ content:last-child {
     justify-items: center;
 }
 
-.slick-track {
-    /* display: flex !important; */
-}
+
 
 .slick-track .slick-slide {
     /* display: flex !important; */
@@ -659,12 +657,35 @@ footer {
     width: 100%;
     height: fit-content;
     max-height: 400px;
-    background: rgb(227, 185, 183);
-    background: linear-gradient(0deg, rgba(227, 185, 183, 1) 5%, rgba(170, 166, 192, 1) 53%);
     margin-top: 10vh;
-
     padding: 6vh;
+    background-color:#99acff;
+    background:
+        radial-gradient(at 77% 68%, hsla(41, 96%, 64%, 1) 5px, transparent 50%),
+        radial-gradient(at 67% 7%, hsla(74, 74%, 61%, 1) 5px, transparent 50%),
+        radial-gradient(at 81% 22%, hsla(272, 79%, 63%, 1) 5px, transparent 50%),
+        radial-gradient(at 41% 97%, hsla(77, 87%, 66%, 1) 5px, transparent 50%),
+        radial-gradient(at 43% 8%, hsla(127, 85%, 79%, 1) 5px, transparent 50%),
+        radial-gradient(at 87% 49%, hsla(96, 87%, 77%, 1) 5px, transparent 50%),
+        radial-gradient(at 12% 45%, hsla(197, 68%, 64%, 1) 5px, transparent 50%);
+    animation: footer 10s infinite linear;
+    /* 10s - скорость анимации*/
+    background-size: 400%;
+    /*Можно менять и подбирать интенсивность*/
+}
 
+@keyframes footer {
+    0% {
+        background-position: 80% 0%;
+    }
+
+    50% {
+        background-position: 20% 100%;
+    }
+
+    100% {
+        background-position: 80% 0%;
+    }
 }
 
 
@@ -804,6 +825,7 @@ footer {
 #about {
     background-color: #E4B9B6;
 }
+
 /* .stories_block:first-child {
     padding: 0;
     margin: 0;
@@ -914,6 +936,7 @@ footer {
     align-items: flex-end;
     /* margin-bottom: 95px; */
 }
+
 .about_inner {
     margin-bottom: 95px;
     padding: 17px 20px;
@@ -921,7 +944,7 @@ footer {
 
 .about_text-wrapper div {
     color: white;
-    
+
 }
 
 .header_stories {
@@ -1270,8 +1293,8 @@ input[type=submit] {
         width: 100%;
         margin: 0;
         padding: 20px;
-        
-        
+
+
         scroll-snap-align: center;
     }
 
