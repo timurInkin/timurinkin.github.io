@@ -10,7 +10,7 @@ function formSubmit(event) {
   let name = document.querySelector('#name').value
   let email = document.querySelector('#email').value
   let tel = document.querySelector('#tel').value
-  let rectype = document.querySelector('.rec-type').value
+  let rectype = document.querySelector('input[name="rec-type"]:checked').value;
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
 
@@ -179,6 +179,12 @@ let sliderParams = {
             slidesToShow: 2,
         }
     },
+    {
+      breakpoint: 500,
+      settings: {
+          slidesToShow: 1,
+      }
+  },
 ]
 }
 
@@ -194,7 +200,6 @@ document.addEventListener("DOMContentLoaded", function(){
 let firstSlide = document.querySelectorAll(".first-slide")
 let secondSlide = document.querySelectorAll(".second-slide")
 
-console.log(secondSlide)
 
 let firstTab = document.querySelector(".first-tab")
 let secondTab = document.querySelector(".second-tab")
@@ -212,3 +217,19 @@ secondTab.addEventListener("click", () => {
   secondSlide.forEach((elem) => elem.style.display = "block")
   toggle.style.left = "50%"
 })
+
+
+let granimInstance = new Granim({
+  element: '#canvas-basic',
+  direction: 'top-bottom',
+  isPausedWhenNotInView: true,
+  states : {
+      "default-state": {
+          gradients: [
+              ['#ff9966', '#ff5e62'],
+              ['#00F260', '#0575E6'],
+              ['#e1eec3', '#f05053']
+          ]
+      }
+  }
+});
