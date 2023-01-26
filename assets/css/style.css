@@ -587,8 +587,8 @@ footer {
     width: 100%;
     height: fit-content;
     max-height: 400px;
-    background: rgb(227, 185, 183);
-    background: linear-gradient(0deg, rgba(227, 185, 183, 1) 5%, rgba(170, 166, 192, 1) 53%);
+    /* background: rgb(227, 185, 183);
+    background: linear-gradient(0deg, rgba(227, 185, 183, 1) 5%, rgba(170, 166, 192, 1) 53%); */
     margin-top: 10vh;
 
     padding: 6vh;

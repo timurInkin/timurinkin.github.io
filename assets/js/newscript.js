@@ -221,7 +221,7 @@ secondTab.addEventListener("click", () => {
 
 let granimInstance = new Granim({
   element: '#canvas-basic',
-  direction: 'left-right',
+  direction: 'top-bottom',
   isPausedWhenNotInView: true,
   states : {
       "default-state": {
