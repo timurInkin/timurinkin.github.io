@@ -3,7 +3,7 @@
 
 // Form submit
 let HTMLForm = document.querySelector('form')
-HTMLForm.addEventListener('submit',formSubmit)
+HTMLForm.addEventListener('submit', formSubmit)
 
 function formSubmit(event) {
   event.preventDefault()
@@ -174,11 +174,17 @@ let sliderParams = {
   slidesToScroll: 1,
   responsive: [
     {
-        breakpoint: 767,
+        breakpoint: 1194,
         settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
         }
     },
+    {
+      breakpoint: 500,
+      settings: {
+          slidesToShow: 1,
+      }
+  },
     {
       breakpoint: 500,
       settings: {
@@ -225,11 +231,10 @@ let granimInstance = new Granim({
   isPausedWhenNotInView: true,
   states : {
       "default-state": {
-          gradients: [
-              ['#ff9966', '#ff5e62'],
-              ['#00F260', '#0575E6'],
-              ['#e1eec3', '#f05053']
-          ]
+        gradients: [
+          ['#834D9B', '#D04ED6'],
+          ['#1CD8D2', '#93EDC7']
+      ]
       }
   }
 });
