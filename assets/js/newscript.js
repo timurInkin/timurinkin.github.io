@@ -225,16 +225,16 @@ secondTab.addEventListener("click", () => {
 })
 
 
-let granimInstance = new Granim({
-  element: '#canvas-basic',
-  direction: 'top-bottom',
-  isPausedWhenNotInView: true,
-  states : {
-      "default-state": {
-        gradients: [
-          ['#834D9B', '#D04ED6'],
-          ['#1CD8D2', '#93EDC7']
-      ]
-      }
-  }
-});
+// let granimInstance = new Granim({
+//   element: '#canvas-basic',
+//   direction: 'top-bottom',
+//   isPausedWhenNotInView: true,
+//   states : {
+//       "default-state": {
+//         gradients: [
+//           ['#834D9B', '#D04ED6'],
+//           ['#1CD8D2', '#93EDC7']
+//       ]
+//       }
+//   }
+// });
