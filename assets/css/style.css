@@ -1399,6 +1399,7 @@ input[type=submit] {
         font-family: "Atyp-Medium";
         font-weight: 400;
         font-size: 2vw;
+        margin-bottom: 1.042vw;
     }
 
     .blog_photoplace {
