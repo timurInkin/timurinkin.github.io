@@ -155,9 +155,6 @@ h6 {
     /* background-color:#A9A5C0; */
 
 }
-
-
-
 .about_name {
     margin-top: 2.656vw;
     font-family: 'Montserrat';
@@ -174,8 +171,6 @@ h6 {
 
 }
 
-
-
 .about_description {
     width: 90%;
     /* max-width: 80%; */
@@ -189,8 +184,6 @@ h6 {
     letter-spacing: 0.005vw;
     color: #000000;
 }
-
-
 
 .intro_photoplace {
     position: relative;
@@ -256,18 +249,19 @@ h6 {
     width: auto;
 }
 
-.content:last-of-type {
-    width: auto;
-}
+/* @media (max-width: 1280px) {
+    .story_container {
+        width: 80vw;
+
+    }
+} */
+
 .content {
-    box-sizing: s;
     display: flex;
     flex-direction: column;
-    width: auto;
-    /*width: 100%;*/
+    width: 100%;
     margin-right: 3.7vw;
     text-align: center;
-
 }
 
 .content:last-child {
@@ -328,19 +322,12 @@ h6 {
 /*rec btns*/
 
 .record {
-    box-sizing: content-box !important;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     position: relative;
     margin-bottom: 5.208vw;
 
 }
-
-.record button {
-    box-sizing: content-box;
-}
-
 .rec-btn {
     width: 48%;
     height: 4.427vw;
@@ -1232,24 +1219,6 @@ input[type=submit] {
 }
 
 
-  /* @media (max-width: 767px) {
-    .slick-dots li button {
-        width: 4vw;
-        height: 4vw;
-    }
-    
-    .slide {
-        height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-items: center;
-    }
-    .slick-slide {
-        margin: 0 5px;
-    }
-} */
-
-
 /* MEDIA QUERIES */
 
 /* IPAD HORIZONTAL AND MOBILE HORIZONTAL */
@@ -1281,7 +1250,8 @@ input[type=submit] {
 
     .intro_inner_item {
         padding: 20px 10px;
-        border: none;
+        /* margin-bottom: 2.25vw; */
+        border-bottom: 1px solid #000000;
 
     }
 
@@ -1638,7 +1608,19 @@ input[type=submit] {
     bottom: 0; */
     left: 0;
 }
+
+/* MEDIA FOR Mobile 500px */
+
 @media (max-width: 500px) {
+
+    /*Header*/
+    .mobile_header {
+        display: block;
+    }
+    .slick-slide {
+        margin: 0 5px;
+    }
+
 
     /*Header*/
     .mobile_header {
