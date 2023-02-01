@@ -322,14 +322,15 @@ h6 {
 /*rec btns*/
 
 .record {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 5.208vw;
+    margin-bottom: 4.208vh;
 }
 
 .rec-btn {
-    width: 48%;
+    width: 36.5vw;
     height: 4.427vw;
     /* margin: 0 auto; */
     border-radius: 2.16vw;
@@ -371,7 +372,7 @@ h6 {
     font-size: 42px;
     font-size: 2.5vw;
     font-weight: 400;
-    margin-bottom: 0.781vw;
+    margin-bottom: 0.181vw;
 }
 
 .slider {
@@ -381,7 +382,7 @@ h6 {
 
 .slider-tabs {
     /* width: 12vw; */
-    width: 23.542vw;
+    width: 15.542vw;
 }
 
 .tabs {
@@ -417,7 +418,7 @@ h6 {
 }
 
 .slide {
-    height: 450px;
+    height: 23vh;
     display: flex;
     align-items: center;
     justify-items: center;
