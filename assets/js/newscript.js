@@ -38,7 +38,7 @@ function formSubmit(event) {
 
 // Form open
 
-let form = document.querySelector(".form-container");
+let form = document.querySelector(".form-container"); 
 let recordButton = document.querySelectorAll(".rec-btn")
 
 recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
@@ -48,8 +48,10 @@ recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
   let offline = document.querySelector('#rec-offline')
   if (event.target.classList.contains("rec-online")) {
     online.setAttribute("checked","")
+    document.querySelector('.form-header').innerHTML = "Записаться на онлайн-консультацию"
   } else if(event.target.classList.contains("rec-offline")) {
     offline.setAttribute("checked","")
+    document.querySelector('.form-header').innerHTML = "Записаться на офлайн-консультацию"
   }
 }))
 
@@ -182,15 +184,9 @@ let sliderParams = {
     {
       breakpoint: 500,
       settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
       }
-  },
-    {
-      breakpoint: 500,
-      settings: {
-          slidesToShow: 1,
-      }
-  },
+  }
 ]
 }
 
