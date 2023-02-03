@@ -186,7 +186,13 @@ let sliderParams = {
       settings: {
           slidesToShow: 2,
       }
-  }
+  },
+  {
+    breakpoint: 850,
+    settings: {
+        slidesToShow: 2,
+    }
+}
 ]
 }
 
