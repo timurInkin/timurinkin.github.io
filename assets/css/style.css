@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Atyp-Medium';
     src: local('Atyp Medium'), local('Atyp-Medium'),
-        url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff2') format('woff2'),
+/*         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff2') format('woff2'), */
         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff') format('woff'),
         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.ttf') format('truetype');
     font-weight: 400;
