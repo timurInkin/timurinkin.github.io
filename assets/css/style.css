@@ -1583,112 +1583,6 @@ input[type=submit] {
         line-height: 2vh;
     }
 
-    /* STORIES */
-
-
-
-    .card-bars {
-        height: auto !important;
-    }
-
-    #story {
-        height: 95%;
-        width: 100%;
-    }
-
-    #story div {
-        width: 100%;
-    }
-
-    /* About */
-
-    .photo_stories_about {
-        margin: 60px 0 30px 0;
-    }
-
-
-    .about_text-wrapper h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-
-    .second_about {
-        margin-top: 63px;
-    }
-
-    .about_text-wrapper .achive_text {
-        font-size: 16px;
-    }
-
-    .second_about .circular_photo {
-        width: 180px;
-        height: 180px;
-    }
-
-    /* Edu */
-    .edu_text-wrapper {
-        margin: 10px 0 0 0;
-    }
-
-    .edu_text-wrapper h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-
-    /* Exp */
-
-    .exp_text-wrapper {
-        margin: 10px 0 0 0;
-    }
-
-    .exp_text-wrapper h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-
-    /* Price */
-
-    .price_text-wrapper {
-        margin-top: 10px;
-        width: 100%;
-        min-height: 55px;
-    }
-
-    .price_text-wrapper h1 {
-        margin: 0;
-        font-size: 22px;
-        line-height: 24px;
-    }
-
-    .achive_column {
-        padding-top: 10px;
-    }
-
-    .achive {
-        height: 35px;
-        align-items: center;
-        padding: 0 0 0 15px;
-        margin: 0 0 20px 0
-    }
-
-    .achive_icon {
-        display: flex;
-        align-items: center;
-        height: auto !important;
-        width: auto !important;
-    }
-
-    /* Methods */
-    .methods_text-wrapper {
-        margin-top: 10px;
-        width: 100%;
-        min-height: 55px;
-    }
-
-    .methods_text-wrapper h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
 
     /* FORM */
 
@@ -1713,24 +1607,9 @@ input[type=submit] {
     }
 }
 
-/* @media(max-width: 321px) {
-    textarea {
-        height: 50px !important;
-    }
-} */
 
-#canvas-basic {
-    box-sizing: content-box;
-    z-index: -10000;
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    /* right: 0;
-    bottom: 0; */
-    left: 0;
-}
+
+
 
 /* MEDIA FOR Mobile 500px */
 @media (max-height: 500px) and (orientation: landscape) {
