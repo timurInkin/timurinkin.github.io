@@ -1728,6 +1728,7 @@ input[type=submit] {
     .story_container {
         width: 100%;
         margin-bottom: 20px;
+
     }
 
     .text_container {
@@ -1808,7 +1809,11 @@ input[type=submit] {
         width: 4.67vw;
         height: 4.67vw;
     }
-
+    /* STORIES */
+    .stories_block {
+        width: 81.775vw !important;
+        height: 82.159vh !important;
+    }
     /* BLOG */
 
     .blog {
