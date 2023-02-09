@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Atyp-Medium';
     src: local('Atyp Medium'), local('Atyp-Medium'),
-/*         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff2') format('woff2'), */
+        /*         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff2') format('woff2'), */
         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff') format('woff'),
         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.ttf') format('truetype');
     font-weight: 400;
@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'Atyp-Semibold';
     src: local('Atyp Semibold'), local('Atyp-Semibold'),
-/*         url('assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.woff2') format('woff2'), */
+        /*         url('assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.woff2') format('woff2'), */
         url('/assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.woff') format('woff'),
         url('/assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.ttf') format('truetype');
     font-weight: 400;
@@ -51,6 +51,10 @@ h4,
 h5,
 h6 {
     margin: 0;
+}
+
+ul {
+    padding: 0 20px;
 }
 
 .mobile_header {
@@ -601,6 +605,20 @@ footer {
 
 /*Card*/
 
+.test_photoplace {
+    padding: -20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('../img/education_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;  
+    z-index: 10000;
+}
+/* .test_photo {
+      
+} */
+
 .stories {
     display: none;
     /* justify-content: center; */
@@ -763,11 +781,12 @@ footer {
 }
 
 .header_stories span {
-    font-size: 36px;
+    font-family: 'Atyp Display';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 38px;
+    width: 100%;
 
 }
 
@@ -970,6 +989,7 @@ footer {
 
 .first_price {
     display: flex;
+    width: 100%;
     height: 100%;
 
 
@@ -1809,11 +1829,13 @@ input[type=submit] {
         width: 4.67vw;
         height: 4.67vw;
     }
+
     /* STORIES */
     .stories_block {
         width: 81.775vw !important;
         height: 82.159vh !important;
     }
+
     /* BLOG */
 
     .blog {
@@ -1821,7 +1843,7 @@ input[type=submit] {
         width: 100vw;
         padding: 3.5vw;
         height: 49.676vh;
-        
+
         margin: 0;
     }
 
@@ -1838,7 +1860,7 @@ input[type=submit] {
         display: flex;
         align-items: flex-start;
         flex-wrap: nowrap;
-        
+
     }
 
     .blog_text {
