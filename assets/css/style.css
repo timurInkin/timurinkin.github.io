@@ -256,7 +256,7 @@ h6 {
 }
 
 .five {
-    background-color: #083A65;
+    background-color: #828CBF;
 }
 
 .text_container {
@@ -625,7 +625,7 @@ footer {
     align-items: center;
     width: 350px;
     height: 700px;
-    padding: 17px 20px;
+    /* padding: 17px 20px; */
     border-radius: 27px;
     /* background-color: rgb(228, 226, 226); */
     border: 1px solid #000000;
@@ -655,10 +655,22 @@ footer {
 
 
 .card_bars {
+    position: absolute;
+    padding: 0 20px 0 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
+}
+
+.card_bars img {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    z-index: 6000;
+    cursor: pointer;
+    user-select: none;
 }
 
 .progress_bar_wrap {
@@ -728,223 +740,44 @@ footer {
 /*About*/
 
 .first_about {
-    display: flex;
     width: 100%;
     height: 100%;
-    align-items: flex-end;
-}
-
-.about_inner:first-child {
-    margin-bottom: 95px;
-    /* padding: 17px 20px; */
-}
-
-/* .about_inner:nth-child() {
-    color: white;
-} */
-
-
-.about_text-wrapper div {
-    color: white;
-}
-
-
-
-.header_stories {
-    font-family: 'Atyp Display';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 45px;
-    margin: 15px 0;
-    color: black;
-    text-align: left;
-
-}
-
-.header_stories span {
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 38px;
-
-}
-
-.header_stories--price {
-    font-size: 36px;
-    height: 90px;
-}
-
-.arrow_right {
-
-    cursor: pointer;
-
-    position: relative;
-
-    width: 100%;
-
-
-    margin: 30px 0;
-
-}
-
-.arrow_right div {
-
-    position: relative;
-
-    top: 20px;
-
-    width: 100%;
-
-    height: 6px;
-
-    background-color: white;
-
-    left: 0;
-
-    display: block;
-
-}
-
-.arrow_right div::before {
-
-    content: '';
-
-    position: absolute;
-
-    width: 27px;
-
-    height: 6px;
-
-    top: 7px;
-
-    right: -5px;
-
-    background-color: white;
-
-    transform: matrix(0.71, -0.66, -0.76, -0.71, 0, 0);
-
-
-    /* transform: rotate(-45deg); */
-
-}
-
-.arrow_right div::after {
-
-    content: '';
-
-    position: absolute;
-
-    width: 27px;
-
-    height: 6px;
-
-    top: -7px;
-
-    right: -5px;
-
-    background-color: white;
-
-    transform: matrix(0.71, 0.66, -0.76, 0.71, 0, 0);
-    /* transform: rotate(45deg); */
-
-}
-
-:after,
-:before {
-
-    -webkit-box-sizing: border-box;
-
-    -moz-box-sizing: border-box;
-
-    box-sizing: border-box;
-
+    background-image: url('../img/stories/stories_about_me_1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .second_about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 63px;
     width: 100%;
-}
-
-.second_about--price {
-    align-items: flex-start;
-    margin-top: 15px;
-}
-
-
-.second_about span {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height, or 125% */
-
-
-    color: #000000;
-}
-
-.circular_photo {
-    text-align: center;
-
-    height: 224px;
-    width: 224px;
-    background-size: cover;
-
-    border-radius: 50%;
-    margin-bottom: 70px;
-
-}
-
-.achive_column {
-    width: 100%;
-}
-
-.achive {
-    display: flex;
-    padding: 15px;
-    justify-content: flex-start;
-    height: 50px;
-    border: 1px solid #000000;
-    border-radius: 16px;
-    margin-bottom: 20px;
-}
-
-
-
-.achive_icon {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.achive_text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.stories_arrow {
-    margin-top: 26px;
-    margin-left: 239px;
+    height: 100%;
+    background-image: url('../img/stories/stories_about_me_2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /*Edu*/
 
-.first_edu_text {
-    /* margin-top: 15px; */
-    font-size: 16px;
-    line-height: 20px;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    /* or 125% */
+.first_edu {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/education_1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
-
-
-    letter-spacing: 0.0125em;
+.second_edu {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/education_2.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.third_edu {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/education_3.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 
@@ -952,33 +785,86 @@ footer {
 
 .first_exp {
     width: 100%;
+    height: 100%;
+    /* background-image: url('../img/stories/price_individually.jpg'); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-
+.second_exp {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/exp-2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 
 /*Price*/
 
-
-
-.first_price,
-.second_price,
-.third_price,
-.fourth_price {
-    flex-direction: column;
-}
-
 .first_price {
-    display: flex;
+    width: 100%;
     height: 100%;
-
-
+    background-image: url('../img/stories/price_individually.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
+.second_price {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/price_individually-1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.third_price {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/price_individually-2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fourth_price {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/price_individually-3.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fifth_price {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/price_individually-4.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 /*Meth*/
-.first_meth div {
-    color: white;
+.first_meth {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/methods-1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.second_meth {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/methods-2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.third_meth {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/methods-3.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* FORM */
