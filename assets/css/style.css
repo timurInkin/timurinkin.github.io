@@ -1728,6 +1728,8 @@ input[type=submit] {
     .stories_block {
         width: 81.775vw !important;
         height: 82.159vh !important;
+        width: 310px !important;
+        height: 660px !important;
     }
     /* BLOG */
 
