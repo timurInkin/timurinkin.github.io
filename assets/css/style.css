@@ -1516,6 +1516,20 @@ input[type=submit] {
     .stories_block {
         transform: rotate(-90deg);
     }
+    .form-window {
+        transform: rotate(-90deg);
+            width: 88.8vh;
+            height: 69vw;
+            min-height: 450px;
+    }
+    .form-header {
+        font-size: 3vw;
+        line-height: 25px;
+    }
+
+    .rec-date {
+        min-height: 60px;
+    }
 }
 
 @media (max-width: 500px) {
