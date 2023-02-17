@@ -256,7 +256,7 @@ h6 {
 }
 
 .five {
-    background-color: #083A65;
+    background-color: #828CBF;
 }
 
 .text_container {
@@ -656,12 +656,21 @@ footer {
 
 .card_bars {
     position: absolute;
-    margin-top: 17px;
+    margin-top: 5px;
     padding: 0 20px 0 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
+}
+
+.card_bars img {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    z-index: 6000;
+    cursor: pointer;
 }
 
 .progress_bar_wrap {

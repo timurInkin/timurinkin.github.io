@@ -76,7 +76,11 @@ let storyNumber = 0
 let progressBar
 let switchBar
 
+let closeButton = document.querySelectorAll(".card_bars img")
 
+closeButton.forEach((elem) => elem.addEventListener('click', () => {
+  closeStories()
+}))
 
 stories.forEach((elem) => elem.style.display = 'none')
 storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
