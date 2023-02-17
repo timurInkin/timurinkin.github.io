@@ -748,7 +748,7 @@ footer {
     width: 100%;
     height: 100%;
     background-image: url('../img/stories/stories_about_me_1.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
