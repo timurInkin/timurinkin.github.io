@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Atyp-Medium';
     src: local('Atyp Medium'), local('Atyp-Medium'),
-/*         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff2') format('woff2'), */
         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff') format('woff'),
         url('/assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.ttf') format('truetype');
     font-weight: 400;
@@ -11,7 +10,6 @@
 @font-face {
     font-family: 'Atyp-Semibold';
     src: local('Atyp Semibold'), local('Atyp-Semibold'),
-/*         url('assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.woff2') format('woff2'), */
         url('/assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.woff') format('woff'),
         url('/assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.ttf') format('truetype');
     font-weight: 400;
@@ -164,15 +162,18 @@ h6 {
     z-index: 1000;
     overflow: hidden;
     filter: drop-shadow(0px 5px 35px rgba(169, 165, 192, 0.9));
+    background-image: url("/assets/img/ju_pic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-.intro_photo {
+/* .intro_photo {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 
 
@@ -764,7 +765,7 @@ footer {
 .first_edu {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/education_1.png');
+    background-image: url('../img/stories/education_1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -772,14 +773,14 @@ footer {
 .second_edu {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/education_2.png');
+    background-image: url('../img/stories/education_2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .third_edu {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/education_3.png');
+    background-image: url('../img/stories/education_3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -1049,7 +1050,6 @@ input[type=submit] {
         width: 94vw;
         padding: 0;
         margin-top: 6vh;
-
     }
 
     .intro_inner {
@@ -1058,7 +1058,6 @@ input[type=submit] {
 
     .intro_inner_item {
         margin-bottom: 20px;
-
     }
 
     .intro_about {
@@ -1066,8 +1065,6 @@ input[type=submit] {
         height: 88vh;
         padding: 24px 27px;
         background: rgba(255, 255, 255, 0.3);
-        /* lilac shadow for mobile and tablet */
-
         box-shadow: 0px 2px 20px rgba(169, 165, 192, 0.8);
     }
 
@@ -1075,12 +1072,9 @@ input[type=submit] {
 
     .intro_inner_item:last-child {
         border-bottom: none;
-
     }
 
     .about_title {
-        /* font-size: 4.46vh; */
-        /* line-height: 3.7vh; */
         font-size: 5.5vw;
         line-height: 50px;
         margin-bottom: 4vh;
@@ -1097,9 +1091,7 @@ input[type=submit] {
         width: 100%;
         font-size: 2.8vh;
         line-height: 4vh;
-
         letter-spacing: 0.005em;
-
         color: #000000;
     }
 
@@ -1121,7 +1113,6 @@ input[type=submit] {
     .delimetr_photo {
         width: 100%;
         height: 100%;
-
         display: flex;
         justify-content: center;
     }
@@ -1129,7 +1120,6 @@ input[type=submit] {
     .story_container {
         font-size: 2vw;
         width: 100%;
-
     }
 
     .img_container img {
@@ -1163,7 +1153,6 @@ input[type=submit] {
 
     .slick-slide {
         height: 53.957vh !important;
-        /* width: 30vw; */
     }
 
 
@@ -1197,7 +1186,6 @@ input[type=submit] {
     }
 
     .blog_text {
-        /* order: 2; */
         position: static;
         width: 50%;
         margin: 0;
@@ -1260,7 +1248,6 @@ input[type=submit] {
         width: 94vw;
         padding: 0;
         margin-top: 6vh;
-
     }
 
     .intro_inner {
@@ -1543,26 +1530,21 @@ input[type=submit] {
         margin: 0 5px;
     }
 
-
     /*Header*/
     .mobile_header {
         display: block;
         padding: 16px;
-
     }
 
     /*Main Cont*/
     .main_container {
         width: 100%;
         padding: 16px;
-
     }
 
     /*Intro inner*/
     .intro_inner {
         flex-direction: column;
-
-
     }
 
     .intro_about {
@@ -1610,6 +1592,8 @@ input[type=submit] {
         height: 30.526vh;
         margin: 2vh auto;
         filter: drop-shadow(0px 2px 20px rgba(169, 165, 192, 0.8));
+        background-image: url("/assets/img/mobile_imgs/portrait_mobile.jpg");
+
     }
 
     .intro_photo {
@@ -1628,7 +1612,6 @@ input[type=submit] {
     .delimetr_photo {
         width: 100%;
         height: 100%;
-
         display: flex;
         justify-content: center;
     }
@@ -1654,7 +1637,6 @@ input[type=submit] {
     /*Under Circle text*/
     .text_container {
         font-size: 2.3972vw;
-        /* font-size: 1.35vh; */
     }
 
 
@@ -1738,7 +1720,6 @@ input[type=submit] {
         width: 100vw;
         padding: 3.5vw;
         height: 49.676vh;
-        
         margin: 0;
     }
 
@@ -1755,11 +1736,9 @@ input[type=submit] {
         display: flex;
         align-items: flex-start;
         flex-wrap: nowrap;
-        
     }
 
     .blog_text {
-        /* box-sizing: content-box; */
         order: 2;
         margin: 0;
         width: 50%;
@@ -1779,7 +1758,6 @@ input[type=submit] {
     }
 
     .blog_photoplace {
-        /* box-sizing: content-box; */
         width: 68vw;
         height: 100%;
         order: 1;
@@ -1788,7 +1766,6 @@ input[type=submit] {
     }
 
     .blog_photo {
-        /* position: absolute; */
         width: 100%;
         height: 100%;
         object-fit: cover;
