@@ -142,13 +142,13 @@ function renderStory() {
       progressBar[i].style.backgroundColor = '#ffffff'
     }
     // set bg image when opened first story
-    if (storyNumber == 0 && innerStoryCounter == 0) {
-      stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
-      stories[storyNumber].style.backgroundSize = "cover"
-    } else {
-      stories[storyNumber].style.backgroundImage = "none"
-      stories[storyNumber].style.backgroundSize = "cover"
-    }
+    // if (storyNumber == 0 && innerStoryCounter == 0) {
+    //   stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
+    //   stories[storyNumber].style.backgroundSize = "cover"
+    // } else {
+    //   stories[storyNumber].style.backgroundImage = "none"
+    //   stories[storyNumber].style.backgroundSize = "cover"
+    // }
 }
 
 storyWrapper.addEventListener('click', (event) => {

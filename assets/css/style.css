@@ -637,28 +637,6 @@ footer {
     overflow: hidden;
 }
 
-#about {
-    background-color: #EDC6D0;
-}
-
-#edu {
-    background-color: #C7B4BC
-}
-
-#exp {
-    background-color: #B3ADC1;
-}
-
-#price {
-    background-color: #A9A5C0;
-}
-
-#methods {
-    background-color: #083A65;
-}
-
-
-
 .card_bars {
     position: absolute;
     padding: 0 10px 0 20px;
@@ -748,7 +726,7 @@ footer {
     width: 100%;
     height: 100%;
     background-image: url('../img/stories/stories_about_me_1.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -1708,10 +1686,10 @@ input[type=submit] {
     }
     /* STORIES */
     .stories_block {
-        width: 81.775vw !important;
-        height: 82.159vh !important;
+        /* width: 81.775vw !important;
+        height: 82.159vh !important; */
         width: 310px !important;
-        height: 660px !important;
+        height: 620px !important;
     }
     /* BLOG */
 
