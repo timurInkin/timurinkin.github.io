@@ -194,10 +194,10 @@ document.addEventListener("DOMContentLoaded", function(){
 let firstSlide = document.querySelectorAll(".first-slide")
 let secondSlide = document.querySelectorAll(".second-slide")
 
-console.log(secondSlide)
-
 let firstTab = document.querySelector(".first-tab")
 let secondTab = document.querySelector(".second-tab")
+
+let activeTab = 0;
 
 let toggle = document.querySelector(".toggle-active")
 
@@ -205,10 +205,58 @@ firstTab.addEventListener("click", () => {
   firstSlide.forEach((elem) => elem.style.display = "block")
   secondSlide.forEach((elem) => elem.style.display = "none")
   toggle.style.left = "0%"
+  activeTab = 0
 })
 
 secondTab.addEventListener("click", () => {
   firstSlide.forEach((elem) => elem.style.display = "none")
   secondSlide.forEach((elem) => elem.style.display = "block")
   toggle.style.left = "50%"
+  activeTab = 1
+});
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const allSlider = document.querySelectorAll(".slick-slide");
+  const parentSlider = document.querySelector(".slick-track");
+
+  const bigFixSize = 400; // Тоже самое что и пункт ниже.
+  const magicNum1 = 2000; // константа для контейнера со слайдерами (Супер рандомное число)
+
+  let lastItem = null; // последний элемент который был активным
+  let def = 0; // сколько пикселей занимает сейчас поле
+
+  for (let i = 0; i !== allSlider.length; i++) {
+    allSlider[i].addEventListener("mouseenter", (e) => {
+      if (e.target.style.width !== `${bigFixSize}px`)
+        def = e.target.style.width; // Хочу вот тут узнать цифру нашего блока
+
+      if (lastItem !== null) {
+        lastItem.style.width = def; // Для прошлого активного, я меняю ширину на дефолт
+        // if (activeTab === 0) {
+        //   lastItem.querySelector(".text-in-slide-fisrt")?.style.display = "none"
+        // } else {
+        //   lastItem.querySelector(".text-in-slide-second")?.style.display = "none"
+        // }
+
+        lastItem = e.target; // Запоминаю этот элемент на будущее.
+      } else {
+        lastItem = e.target
+      }
+      e.target.style.width = `${bigFixSize}px`;
+      parentSlider.style.width = `${magicNum1}px`;
+
+      // if (activeTab === 0) {
+      //   e.target.querySelector(".text-in-slide-fisrt")?.style.display = "block";
+      // } else if (activeTab === 1) {
+      //   e.target.querySelector(".text-in-slide-second")?.style.display = "block";
+      // }
+
+      /*
+       e.target.querySelector("...")?.style.display = "block"; // показать 
+       e.target.querySelector("...")?.style.display = "none"; // скрыть
+
+      */
+    })
+  }
 })

@@ -20,6 +20,11 @@
 
 
 
+/** test place here **/
+.slick-slide {
+    transition: 0.3s;
+}
+
 
 *,
 *:after,
