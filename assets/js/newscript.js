@@ -3,14 +3,14 @@
 
 // Form submit
 let HTMLForm = document.querySelector('form')
-HTMLForm.addEventListener('submit',formSubmit)
+HTMLForm.addEventListener('submit', formSubmit)
 
 function formSubmit(event) {
   event.preventDefault()
   let name = document.querySelector('#name').value
   let email = document.querySelector('#email').value
   let tel = document.querySelector('#tel').value
-  let rectype = document.querySelector('.rec-type').value
+  let rectype = document.querySelector('input[name="rec-type"]:checked').value;
   let recdate = document.querySelector('#rec-date').value
   let message = document.querySelector('#message').value
 
@@ -38,7 +38,7 @@ function formSubmit(event) {
 
 // Form open
 
-let form = document.querySelector(".form-container");
+let form = document.querySelector(".form-container"); 
 let recordButton = document.querySelectorAll(".rec-btn")
 
 recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
@@ -48,8 +48,10 @@ recordButton.forEach((elem) => elem.addEventListener("click", (event) => {
   let offline = document.querySelector('#rec-offline')
   if (event.target.classList.contains("rec-online")) {
     online.setAttribute("checked","")
+    document.querySelector('.form-header').innerHTML = "Записаться на онлайн-консультацию"
   } else if(event.target.classList.contains("rec-offline")) {
     offline.setAttribute("checked","")
+    document.querySelector('.form-header').innerHTML = "Записаться на офлайн-консультацию"
   }
 }))
 
@@ -74,7 +76,11 @@ let storyNumber = 0
 let progressBar
 let switchBar
 
+let closeButton = document.querySelectorAll(".card_bars img")
 
+closeButton.forEach((elem) => elem.addEventListener('click', () => {
+  closeStories()
+}))
 
 stories.forEach((elem) => elem.style.display = 'none')
 storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
@@ -136,13 +142,13 @@ function renderStory() {
       progressBar[i].style.backgroundColor = '#ffffff'
     }
     // set bg image when opened first story
-    if (storyNumber == 0 && innerStoryCounter == 0) {
-      stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
-      stories[storyNumber].style.backgroundSize = "cover"
-    } else {
-      stories[storyNumber].style.backgroundImage = "none"
-      stories[storyNumber].style.backgroundSize = "cover"
-    }
+    // if (storyNumber == 0 && innerStoryCounter == 0) {
+    //   stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
+    //   stories[storyNumber].style.backgroundSize = "cover"
+    // } else {
+    //   stories[storyNumber].style.backgroundImage = "none"
+    //   stories[storyNumber].style.backgroundSize = "cover"
+    // }
 }
 
 storyWrapper.addEventListener('click', (event) => {
@@ -174,11 +180,23 @@ let sliderParams = {
   slidesToScroll: 1,
   responsive: [
     {
-        breakpoint: 767,
+        breakpoint: 1194,
         settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
         }
     },
+    {
+      breakpoint: 500,
+      settings: {
+          slidesToShow: 2,
+      }
+  },
+  {
+    breakpoint: 850,
+    settings: {
+        slidesToShow: 2,
+    }
+}
 ]
 }
 
@@ -255,3 +273,23 @@ window.addEventListener("DOMContentLoaded", () => {
     })
   }
 })
+secondTab.addEventListener("click", () => {
+  firstSlide.forEach((elem) => elem.style.display = "none")
+  secondSlide.forEach((elem) => elem.style.display = "block")
+  toggle.style.left = "50%"
+})
+
+
+// let granimInstance = new Granim({
+//   element: '#canvas-basic',
+//   direction: 'top-bottom',
+//   isPausedWhenNotInView: true,
+//   states : {
+//       "default-state": {
+//         gradients: [
+//           ['#834D9B', '#D04ED6'],
+//           ['#1CD8D2', '#93EDC7']
+//       ]
+//       }
+//   }
+// });
