@@ -20,10 +20,28 @@
 
 
 
-/** test place here **/
+/* slider style*/
 .slick-slide {
     transition: 0.3s;
 }
+
+.text-in-slider {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.218);
+    transition: 1s;
+}
+
+.first-slide, .second-slide {
+    position: relative;
+}
+/*  slider style - end  */
 
 
 *,

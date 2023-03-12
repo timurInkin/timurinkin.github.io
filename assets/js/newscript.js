@@ -201,62 +201,57 @@ let activeTab = 0;
 
 let toggle = document.querySelector(".toggle-active")
 
-firstTab.addEventListener("click", () => {
-  firstSlide.forEach((elem) => elem.style.display = "block")
-  secondSlide.forEach((elem) => elem.style.display = "none")
-  toggle.style.left = "0%"
-  activeTab = 0
-})
+firstTab.addEventListener("click", () => changeSlider(0))
 
-secondTab.addEventListener("click", () => {
-  firstSlide.forEach((elem) => elem.style.display = "none")
-  secondSlide.forEach((elem) => elem.style.display = "block")
-  toggle.style.left = "50%"
-  activeTab = 1
-});
+secondTab.addEventListener("click", () => changeSlider(1));
 
+function changeSlider (i  = 0) {
+  firstSlide.forEach((elem) => elem.style.display = i === 0 ? "block" : "none")
+  secondSlide.forEach((elem) => elem.style.display = i === 0 ? "none" : "block")
+  toggle.style.left = i === 0 ? "0%" : "50%"
+  activeTab = i
+}
 
 window.addEventListener("DOMContentLoaded", () => {
-  const allSlider = document.querySelectorAll(".slick-slide");
+  const sliderItems = document.querySelectorAll(".slick-slide");
   const parentSlider = document.querySelector(".slick-track");
 
-  const bigFixSize = 400; // Тоже самое что и пункт ниже.
-  const magicNum1 = 2000; // константа для контейнера со слайдерами (Супер рандомное число)
+  const containerSlider = parseInt(parentSlider.style.width.replace("px", "")); // забираю ширину блока, который есть сейчас
+  const widthSliderItem = parseInt(sliderItems[0].style.width.replace("px", "")); // забираю ширину блока, который есть сейчас
 
-  let lastItem = null; // последний элемент который был активным
-  let def = 0; // сколько пикселей занимает сейчас поле
+  const bigViewSlider = widthSliderItem + (widthSliderItem / 3); // Тоже самое что и пункт ниже.
+  const magicNum1 = containerSlider + (containerSlider / 3); // константа для контейнера со слайдерами (Супер рандомное число)
 
-  for (let i = 0; i !== allSlider.length; i++) {
-    allSlider[i].addEventListener("mouseenter", (e) => {
-      if (e.target.style.width !== `${bigFixSize}px`)
-        def = e.target.style.width; // Хочу вот тут узнать цифру нашего блока
+  let defaultWidthSliderItem = sliderItems[0].style.width; // сколько пикселей занимает сейчас поле с фоткой
 
-      if (lastItem !== null) {
-        lastItem.style.width = def; // Для прошлого активного, я меняю ширину на дефолт
-        // if (activeTab === 0) {
-        //   lastItem.querySelector(".text-in-slide-fisrt")?.style.display = "none"
-        // } else {
-        //   lastItem.querySelector(".text-in-slide-second")?.style.display = "none"
-        // }
-
-        lastItem = e.target; // Запоминаю этот элемент на будущее.
-      } else {
-        lastItem = e.target
+  document.querySelector(".slick-dots").addEventListener("click", () => {
+    // NOTE сори это ебучий костыль, но если его не сделать, тогда окно слайдера ресайзиться и фотка лезет на одну ниже. С этой вроде получше немного
+    setTimeout(() => {
+      if (parentSlider.style.width !== `${magicNum1}px`) {
+        parentSlider.style.width = `${magicNum1}px`;
       }
-      e.target.style.width = `${bigFixSize}px`;
-      parentSlider.style.width = `${magicNum1}px`;
+    }, 500);
+  })
 
-      // if (activeTab === 0) {
-      //   e.target.querySelector(".text-in-slide-fisrt")?.style.display = "block";
-      // } else if (activeTab === 1) {
-      //   e.target.querySelector(".text-in-slide-second")?.style.display = "block";
-      // }
+  for (let i = 0; i !== sliderItems.length; i++) {
+    // Если пользователь навёл мышку то делаем код ниже
+    sliderItems[i].addEventListener("mouseenter", (e) => {
+      // Указываю у большего контейнера ширину если там вдруг стоит другая.
+      if (parentSlider.style.width !== `${magicNum1}px`) {
+        parentSlider.style.width = `${magicNum1}px`;
+      }
 
-      /*
-       e.target.querySelector("...")?.style.display = "block"; // показать 
-       e.target.querySelector("...")?.style.display = "none"; // скрыть
+      e.target.style.width = `${bigViewSlider}px`;
+      const bl = e.target.querySelector(activeTab === 0 ? ".block-1" : ".block-2");
+      bl.style.display = "block";
+    });
+    
+    // Если пользователь увёл мышку с блока то делаем это
+    sliderItems[i].addEventListener("mouseleave", (e) => {
+      e.target.style.width = defaultWidthSliderItem;
 
-      */
+      const bl = item.querySelector(activeTab === 0 ? ".block-1" : ".block-2" )
+      bl.style.display = "none";
     })
   }
 })
