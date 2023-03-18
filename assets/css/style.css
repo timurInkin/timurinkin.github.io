@@ -791,7 +791,7 @@ footer {
 .first_exp {
     width: 100%;
     height: 100%;
-    /* background-image: url('../img/stories/price_individually.jpg'); */
+    background-image: url('../img/stories/exp-1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -810,7 +810,7 @@ footer {
 .first_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually.jpg');
+    background-image: url('../img/stories/price_individually-1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -818,7 +818,7 @@ footer {
 .second_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-1.jpg');
+    background-image: url('../img/stories/price_individually-2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -826,7 +826,7 @@ footer {
 .third_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-2.jpg');
+    background-image: url('../img/stories/price_individually-3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -834,7 +834,7 @@ footer {
 .fourth_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-3.jpg');
+    background-image: url('../img/stories/price_individually-4.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -842,7 +842,7 @@ footer {
 .fifth_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-4.jpg');
+    background-image: url('../img/stories/price_individually-5.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -868,6 +868,13 @@ footer {
     width: 100%;
     height: 100%;
     background-image: url('../img/stories/methods-3.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.fourth_meth {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/methods-4.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
