@@ -76,7 +76,11 @@ let storyNumber = 0
 let progressBar
 let switchBar
 
+let closeButton = document.querySelectorAll(".card_bars img")
 
+closeButton.forEach((elem) => elem.addEventListener('click', () => {
+  closeStories()
+}))
 
 stories.forEach((elem) => elem.style.display = 'none')
 storyIcons.forEach((elem) => elem.addEventListener('click', (event) => 
@@ -138,13 +142,13 @@ function renderStory() {
       progressBar[i].style.backgroundColor = '#ffffff'
     }
     // set bg image when opened first story
-    if (storyNumber == 0 && innerStoryCounter == 0) {
-      stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
-      stories[storyNumber].style.backgroundSize = "cover"
-    } else {
-      stories[storyNumber].style.backgroundImage = "none"
-      stories[storyNumber].style.backgroundSize = "cover"
-    }
+    // if (storyNumber == 0 && innerStoryCounter == 0) {
+    //   stories[storyNumber].style.backgroundImage = "url('../assets/img/ju_pic.jpg')"
+    //   stories[storyNumber].style.backgroundSize = "cover"
+    // } else {
+    //   stories[storyNumber].style.backgroundImage = "none"
+    //   stories[storyNumber].style.backgroundSize = "cover"
+    // }
 }
 
 storyWrapper.addEventListener('click', (event) => {
@@ -208,18 +212,67 @@ document.addEventListener("DOMContentLoaded", function(){
 let firstSlide = document.querySelectorAll(".first-slide")
 let secondSlide = document.querySelectorAll(".second-slide")
 
-
 let firstTab = document.querySelector(".first-tab")
 let secondTab = document.querySelector(".second-tab")
 
+let activeTab = 0;
+
 let toggle = document.querySelector(".toggle-active")
 
-firstTab.addEventListener("click", () => {
-  firstSlide.forEach((elem) => elem.style.display = "block")
-  secondSlide.forEach((elem) => elem.style.display = "none")
-  toggle.style.left = "0%"
-})
+firstTab.addEventListener("click", () => changeSlider(0))
 
+secondTab.addEventListener("click", () => changeSlider(1));
+
+function changeSlider (i  = 0) {
+  firstSlide.forEach((elem) => elem.style.display = i === 0 ? "block" : "none")
+  secondSlide.forEach((elem) => elem.style.display = i === 0 ? "none" : "block")
+  toggle.style.left = i === 0 ? "0%" : "50%"
+  activeTab = i
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const sliderItems = document.querySelectorAll(".slick-slide");
+  const parentSlider = document.querySelector(".slick-track");
+
+  const containerSlider = parseInt(parentSlider.style.width.replace("px", "")); // забираю ширину блока, который есть сейчас
+  const widthSliderItem = parseInt(sliderItems[0].style.width.replace("px", "")); // забираю ширину блока, который есть сейчас
+
+  const bigViewSlider = widthSliderItem + (widthSliderItem / 3); // Тоже самое что и пункт ниже.
+  const magicNum1 = containerSlider + (containerSlider / 3); // константа для контейнера со слайдерами (Супер рандомное число)
+
+  let defaultWidthSliderItem = sliderItems[0].style.width; // сколько пикселей занимает сейчас поле с фоткой
+
+  document.querySelector(".slick-dots").addEventListener("click", () => {
+    // NOTE сори это ебучий костыль, но если его не сделать, тогда окно слайдера ресайзиться и фотка лезет на одну ниже. С этой вроде получше немного
+    setTimeout(() => {
+      if (parentSlider.style.width !== `${magicNum1}px`) {
+        parentSlider.style.width = `${magicNum1}px`;
+      }
+    }, 500);
+  })
+
+  for (let i = 0; i !== sliderItems.length; i++) {
+    // Если пользователь навёл мышку то делаем код ниже
+    sliderItems[i].addEventListener("mouseenter", (e) => {
+      // Указываю у большего контейнера ширину если там вдруг стоит другая.
+      if (parentSlider.style.width !== `${magicNum1}px`) {
+        parentSlider.style.width = `${magicNum1}px`;
+      }
+
+      e.target.style.width = `${bigViewSlider}px`;
+      const bl = e.target.querySelector(activeTab === 0 ? ".block-1" : ".block-2");
+      bl.style.display = "block";
+    });
+    
+    // Если пользователь увёл мышку с блока то делаем это
+    sliderItems[i].addEventListener("mouseleave", (e) => {
+      e.target.style.width = defaultWidthSliderItem;
+
+      const bl = item.querySelector(activeTab === 0 ? ".block-1" : ".block-2" )
+      bl.style.display = "none";
+    })
+  }
+})
 secondTab.addEventListener("click", () => {
   firstSlide.forEach((elem) => elem.style.display = "none")
   secondSlide.forEach((elem) => elem.style.display = "block")
