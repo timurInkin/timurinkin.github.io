@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <meta name="keywords"
-        content="Семерикова, Юлия, консультация, Полиграфолог, полиграф, проверка, подбор, няня, охрана, расследование, помощь">
-    <meta name="description" content="">
+        content="похожие из вордстата через запятую по кол-ву запросов">
+    <meta name="description" content="короткое описание 120/200 симовлов, основные ключевые слова должны быть здесь. по каким запросам будет продвигаться">
+    <!--метатеги для соцсетей https://schema.org/docs/schemas.html-->
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/slick.css" />
     <link rel="stylesheet" href="assets/css/slick-theme.css" />
@@ -19,11 +21,11 @@
     <link rel="preload" href="/assets/fonts/AtypDisplay-Semibold/AtypDisplay-Semibold.woff" as="font">
 
     <link rel="preload" href="/assets/img/stories/education_1.jpg" as="image">
-    <link rel="preload" href="/assets/img/stories/education_2.jpg" as="image">
-    <link rel="preload" href="/assets/img/stories/education_3.jpg" as="image">
+    <!-- <link rel="preload" href="/assets/img/stories/education_2.jpg" as="image"> -->
+    <!-- <link rel="preload" href="/assets/img/stories/education_3.jpg" as="image"> -->
     <link rel="preload" href="/assets/img/stories/stories_about_me_1.jpg" as="image">
-    <link rel="preload" href="/assets/img/stories/stories_about_me_2.jpg" as="image">
-    <link rel="preload" href="/assets/img/stories/price_individually.jpg" as="image">
+    <!-- <link rel="preload" href="/assets/img/stories/stories_about_me_2.jpg" as="image"> -->
+    <!-- <link rel="preload" href="/assets/img/stories/price_individually.jpg" as="image"> -->
     <link rel="preload" href="/assets/img/stories/price_individually-1.jpg" as="image">
     <link rel="preload" href="/assets/img/stories/price_individually-2.jpg" as="image">
     <link rel="preload" href="/assets/img/stories/price_individually-3.jpg" as="image">
@@ -37,10 +39,11 @@
     <title>Полиграфолог | Юлия</title>
 </head>
 
-<body>
+    
+    <body itemscope itemtype="https://schema.org/Person">
     <header class="mobile_header">
         <div class="mobile_header_inner">
-            <div class="mobile_header_text">Юлия Семерикова</div>
+            <div class="mobile_header_text" itemprop="name">Юлия Семерикова</div>
             <div class="mobile_header_pic_place">
                 <img class="mobile_header_pic" src="assets/img/mobile_imgs/star.png" alt="">
             </div>
@@ -52,13 +55,14 @@
             <div class="intro_inner">
                 <div class="intro_about">
                     <div class="intro_inner_item">
-                        <div class="about_title">Юлия Семерикова</div>
+                        <!-- расставить итемпропы, у вебмастера есть тулы для проверки пропов -->
+                        <h1 class="about_title"itemprop="name">Юлия Семерикова</h1>
                     </div>
                     <div class="intro_inner_item">
-                        <div class="about_name">Полиграфолог</div>
+                        <h2 class="about_name">Полиграфолог</h2>
                     </div>
                     <div class="intro_inner_item">
-                        <p class="about_description">Моя миссия — это предоставление профессиональной проверки на полиграфе самого высокого качества и точности. Обладая многолетним опытом и экспертизой, я предлагаю широкий спектр услуг, разработанных для удовлетворения уникальных потребностей моих клиентов. Независимо от того, нужна ли вам проверка на полиграфе по личным или профессиональным причинам, я здесь, чтобы помочь.</p>
+                        <p class="about_description">Ключевые слова внедритьМоя миссия — это предоставление профессиональной проверки на полиграфе самого высокого качества и точности. Обладая многолетним опытом и экспертизой, я предлагаю широкий спектр услуг, разработанных для удовлетворения уникальных потребностей моих клиентов. Независимо от того, нужна ли вам проверка на полиграфе по личным или профессиональным причинам, я здесь, чтобы помочь.</p>
                     </div>
                 </div>
                 <div class="intro_photoplace">
@@ -66,7 +70,7 @@
                 </div>
             </div>
             <div class="delimetr">
-                <img class="delimetr_photo" src="assets/img/delimetr.png" alt="">
+                <img class="delimetr_photo" src="assets/img/delimetr.png" alt="delimetr for sections">
             </div>  
         </div>
 
@@ -124,7 +128,7 @@
                 офлайн-консультацию</button>
         </div>
 
-        <!-- <div class="slider-wrapper">
+        <div class="slider-wrapper">
             <h2 class="slider-header">Сертификаты</h2>
             <div class="slider-tabs">
                 <div class="tabs">
@@ -233,7 +237,7 @@
                 </div>
 
             </div>
-        </div> -->
+        </div>
 
         <section class="blog">
             <div class="blog-window">
@@ -268,8 +272,9 @@
 
     <footer>
         <div class="footer_1">
-            <a class="footer_link" href="callto:">+7(912) 765-77-72</a>
-            <a class="footer_link" href="mailto:">julia@gmail.com</a>
+            
+            <a class="footer_link" href="callto:"itemprop="telephone" >+7(912) 765-77-72</a>
+            <a class="footer_link" href="mailto:" itemprop="email">julia@gmail.com</a>
         </div>
         <div class="footer_2">
             <span>Юлия Семерикова | полиграфолог | г. Ижевск</span>
