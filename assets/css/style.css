@@ -75,14 +75,17 @@ h6 {
     margin: 0;
 }
 
+ul {
+    padding: 0 20px;
+}
+
 .mobile_header {
     display: none;
     width: 100%;
     height: 40px;
-    margin-bottom: 20px;
+/*     margin-bottom: 20px; */
     background: rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2));
-    backdrop-filter: blur(7.5px);
+    box-shadow: 0px 2px 20px rgba(169, 165, 192, 0.8);
 }
 
 .mobile_header_inner {
@@ -170,7 +173,7 @@ h6 {
     font-style: normal;
     font-weight: 400;
     font-size: .833vw;
-    line-height: 1.25vw;
+    line-height: 0.938vw;
 
 
     letter-spacing: 0.005vw;
@@ -641,6 +644,20 @@ footer {
 
 /*Card*/
 
+.test_photoplace {
+    padding: -20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('../img/education_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;  
+    z-index: 10000;
+}
+/* .test_photo {
+      
+} */
+
 .stories {
     display: none;
     /* justify-content: center; */
@@ -804,7 +821,7 @@ footer {
 .first_exp {
     width: 100%;
     height: 100%;
-    /* background-image: url('../img/stories/price_individually.jpg'); */
+    background-image: url('../img/stories/exp-1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -823,7 +840,7 @@ footer {
 .first_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually.jpg');
+    background-image: url('../img/stories/price_individually-1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -831,7 +848,7 @@ footer {
 .second_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-1.jpg');
+    background-image: url('../img/stories/price_individually-2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -839,7 +856,7 @@ footer {
 .third_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-2.jpg');
+    background-image: url('../img/stories/price_individually-3.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -847,7 +864,7 @@ footer {
 .fourth_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-3.jpg');
+    background-image: url('../img/stories/price_individually-4.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -855,7 +872,7 @@ footer {
 .fifth_price {
     width: 100%;
     height: 100%;
-    background-image: url('../img/stories/price_individually-4.jpg');
+    background-image: url('../img/stories/price_individually-5.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -881,6 +898,13 @@ footer {
     width: 100%;
     height: 100%;
     background-image: url('../img/stories/methods-3.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.fourth_meth {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stories/methods-4.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -1167,6 +1191,9 @@ input[type=submit] {
     .slick-slide {
         height: 53.957vh !important;
     }
+    
+
+    
 
 
     /* BLOG */
@@ -1601,9 +1628,11 @@ input[type=submit] {
 
     /*Intro Photo*/
     .intro_photoplace {
+        order: -1;
         width: 100%;
         height: 30.526vh;
-        margin: 2vh auto;
+        margin: 0 auto;
+        margin-bottom: 10px;
         filter: drop-shadow(0px 2px 20px rgba(169, 165, 192, 0.8));
         background-image: url("/assets/img/mobile_imgs/portrait_mobile.jpg");
 
@@ -1719,6 +1748,7 @@ input[type=submit] {
         width: 4.67vw;
         height: 4.67vw;
     }
+
     /* STORIES */
     .stories_block {
         /* width: 81.775vw !important;
@@ -1726,6 +1756,7 @@ input[type=submit] {
         width: 310px !important;
         height: 620px !important;
     }
+
     /* BLOG */
 
     .blog {
