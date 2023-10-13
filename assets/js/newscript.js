@@ -237,16 +237,18 @@ window.addEventListener("DOMContentLoaded", () => {
   const containerSlider = parseInt(parentSlider.style.width.replace("px", "")); // забираю ширину блока, который есть сейчас
   const widthSliderItem = parseInt(sliderItems[0].style.width.replace("px", "")); // забираю ширину блока, который есть сейчас
 
-  const bigViewSlider = widthSliderItem + (widthSliderItem / 3); // Тоже самое что и пункт ниже.
-  const magicNum1 = containerSlider + (containerSlider / 3); // константа для контейнера со слайдерами (Супер рандомное число)
+  const bigViewSlider = 2.4*widthSliderItem; // Тоже самое что и пункт ниже.
+  const magicNum1 = containerSlider*4/3; // константа для контейнера со слайдерами (Супер рандомное число)
 
   let defaultWidthSliderItem = sliderItems[0].style.width; // сколько пикселей занимает сейчас поле с фоткой
+
+  let certificateWidth = parseInt(document.querySelector(".certificate").style.width.replace("px", ""));
 
   document.querySelector(".slick-dots").addEventListener("click", () => {
     // NOTE сори это ебучий костыль, но если его не сделать, тогда окно слайдера ресайзиться и фотка лезет на одну ниже. С этой вроде получше немного
     setTimeout(() => {
-      if (parentSlider.style.width !== `${magicNum1}px`) {
-        parentSlider.style.width = `${magicNum1}px`;
+      if (parentSlider.style.width !== certificateWidth) {
+        parentSlider.style.width = certificateWidth;
       }
     }, 500);
   })
@@ -260,15 +262,16 @@ window.addEventListener("DOMContentLoaded", () => {
       }
 
       e.target.style.width = `${bigViewSlider}px`;
+      e.target.querySelector(".certificate").style.transform = "translate(0)"
       const bl = e.target.querySelector(activeTab === 0 ? ".block-1" : ".block-2");
       bl.style.display = "block";
     });
     
     // Если пользователь увёл мышку с блока то делаем это
-    sliderItems[i].addEventListener("mouseleave", (e) => {
+      sliderItems[i].addEventListener("mouseleave", (e) => {
       e.target.style.width = defaultWidthSliderItem;
-
-      const bl = item.querySelector(activeTab === 0 ? ".block-1" : ".block-2" )
+      e.target.querySelector(".certificate").style.transform = "translate(-25%)"
+      const bl = e.target.querySelector(activeTab === 0 ? ".block-1" : ".block-2" )
       bl.style.display = "none";
     })
   }
